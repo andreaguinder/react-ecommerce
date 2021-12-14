@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
+// prueba de comentario en appjs
 function App() {
   return (
     <div className="App">
