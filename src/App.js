@@ -1,6 +1,15 @@
 //
+
+import NavBar from "./components/NavBar";
+
 function App (){
-    return "Hola Mundo JSX"
+    return (
+
+        <>
+            <NavBar/>
+        </>
+
+    )
 }
 
 export default App
