@@ -1,4 +1,4 @@
-const Footer = () => {
+function Footer () {
     return (
     <>
         <footer>
@@ -11,11 +11,11 @@ const Footer = () => {
                 </div>
                 <div>
                     <p>Logo</p>
-                    <p>Diseño y Desarrollo por <b><a href="">Andrea Guinder</a></b></p>
+                    <p>Diseño y Desarrollo por <b><a href="https://andreaguinder.github.io/portfolio-guinderandrea/">Andrea Guinder</a></b></p>
                 </div>
                 <div>
                     <p>Tel: (+54) 11 6867 5242</p>
-                    <p>Av.O Higgins 247 Haedo</p>
+                    <p>Av.O Higgins 247 - Haedo</p>
                     <p>alyssa.cuadros@gmail.com</p>
                 </div>
         </footer>
