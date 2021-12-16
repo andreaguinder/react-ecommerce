@@ -1,9 +1,10 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 function CartWidget (){
     return (
-            <li><a href="#"><FontAwesomeIcon icon={faShoppingCart}/></a></li>
+            <FontAwesomeIcon icon={faShoppingCart}/>
     )
 }
 

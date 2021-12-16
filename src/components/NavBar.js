@@ -7,26 +7,7 @@ import { faBehance } from '@fortawesome/free-brands-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
-
-
-
-/*
 const NavBar = () => {
-return (
-<div className='App'>
-    <h1>App</h1>
-</div>
-
-
-)
-
-
-
-
-}
-
-*/
-function NavBar (){
     return (
     <>
         <header>
@@ -37,15 +18,15 @@ function NavBar (){
                     <p>Buscador</p>
                 </div>
             <div>
-                <img src="./components/img/logo-alyssa.png"/>
+                <img id="logoNavBar" src="logo-alyssa.png" alt="Logo Alyssa"/>
             </div>
+            <div>
                 <nav>
-                    <ul>
-                        <li><a href="#"><FontAwesomeIcon icon={faUser}/></a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faHeart}/></a></li>
-                        <li><CartWidget/></li>
-                    </ul>
+                    <a href="#"><FontAwesomeIcon icon={faUser}/></a>
+                    <a href="#"><FontAwesomeIcon icon={faHeart}/></a>
+                    <a href="#"><CartWidget/></a>
                 </nav>
+            </div>
         </header>
     </>
     )
