@@ -1,8 +1,6 @@
-
+import React from "react"
+import CartWidget from "./CartWidget";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import CartWidget from "./components/CartWidget";
-
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faBehance } from '@fortawesome/free-brands-svg-icons'
@@ -11,6 +9,23 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 
 
+
+/*
+const NavBar = () => {
+return (
+<div className='App'>
+    <h1>App</h1>
+</div>
+
+
+)
+
+
+
+
+}
+
+*/
 function NavBar (){
     return (
     <>
