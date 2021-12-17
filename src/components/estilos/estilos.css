@@ -52,4 +52,15 @@ footer div {
   align-items: center;
   justify-content: center;
   align-self: center;
+}
+
+.divCentrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+}
+.divCentrado button {
+  padding: 1%;
+  margin: 1%;
 }/*# sourceMappingURL=estilos.css.map */

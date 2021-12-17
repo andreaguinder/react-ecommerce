@@ -58,3 +58,15 @@ footer{
         align-self: center;
     }
 }
+
+.divCentrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+
+    button{
+        padding: 1%;
+        margin: 1%;
+    }
+}
