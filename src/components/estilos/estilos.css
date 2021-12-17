@@ -1,3 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: "roboto", sans-serif;
+}
+
 body {
   background-color: aqua;
+}
+
+#logoNavBar {
+  width: 50%;
+  height: auto;
+}
+
+header {
+  display: inline-flex;
+  justify-content: space-around;
+  align-content: center;
+  background-color: white;
+  width: 100vw;
+  height: auto;
+  box-shadow: 0px 5px 7px 0px rgba(59, 59, 59, 0.75);
+  align-items: center;
+}
+header div {
+  width: 33%;
+  align-items: center;
+}
+header icon {
+  width: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+  background-size: 100vw;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+  box-shadow: 5px 0px 7px 0px rgba(59, 59, 59, 0.75);
+}
+footer div {
+  flex-direction: horizontal;
+  flex-wrap: wrap;
+  align-content: center;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
 }/*# sourceMappingURL=estilos.css.map */

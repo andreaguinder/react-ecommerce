@@ -19,6 +19,7 @@ body{
 header{
     display: inline-flex;
     justify-content: space-around;
+    align-content: center;
     background-color: rgb(255, 255, 255);
     width: 100vw;
     height: auto;
@@ -33,5 +34,27 @@ header{
 
     icon{
         width: 1rem;
+    }
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    background-size: 100vw;
+    align-items: center;
+    align-content: center;
+    text-decoration: none;
+    box-shadow: 5px 0px 7px 0px rgba(59, 59, 59, 0.75);
+
+    div{
+        flex-direction: horizontal;
+        flex-wrap: wrap;
+        align-content: center;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
     }
 }
