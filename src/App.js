@@ -11,7 +11,6 @@ function App (){
         <>
             <NavBar/>
             <ItemListContainer/>
-            <Contador stock={5} initial={1}/>
             <Footer/>
         </>
 
