@@ -21,7 +21,9 @@ const ItemCount = ( {stock, initial, onAdd}) => {
         <button onClick={() => restarProducto()} disabled={ItemCount === initial}>-</button>
         <button onClick={() => sumarProducto()} disabled={ItemCount >= stock}>+</button>
         <button onClick={() => confirmarProducto()} disabled={stock === 0}>Confirmar</button>
+        <p>
         <button> Agregar al Carrito </button>
+        </p>
     </div>
     )
 }

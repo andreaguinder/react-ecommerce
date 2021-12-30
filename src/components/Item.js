@@ -1,3 +1,5 @@
+import ItemCount from "./ItemCount";
+
 const Item = ({ item }) => {
     return (
         <div className="p-1">
@@ -5,7 +7,9 @@ const Item = ({ item }) => {
             <h5>{item.nombre}</h5>
             <img src={item.img} alt={item.nombre} width={100}/>
             <p>${item.precio}</p>
+            <p>Stock Disponible: {item.stock}</p>
             <button id="buttonVerMas"><a href="ItemDetailContainer.js">Ver más</a></button>
+            <ItemCount/>
         </div>
         </div>
     )
