@@ -1,4 +1,4 @@
-function Footer () {
+const Footer = () => {
     return (
     <>
         <footer>
@@ -10,7 +10,7 @@ function Footer () {
                     </ul>
                 </div>
                 <div>
-                    <p>Logo</p>
+                    <p className="divCentrado">Logo</p>
                     <p>Diseño y Desarrollo por <b><a href="https://andreaguinder.github.io/portfolio-guinderandrea/">Andrea Guinder</a></b></p>
                 </div>
                 <div>
