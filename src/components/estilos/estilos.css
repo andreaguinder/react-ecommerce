@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pushster&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  font-family: "roboto", sans-serif;
+  font-family: "Pushster", cursive;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 }
 
 #logoNavBar {
-  width: 50%;
+  width: 20%;
   height: auto;
 }
 
