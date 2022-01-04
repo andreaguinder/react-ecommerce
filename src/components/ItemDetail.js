@@ -10,6 +10,7 @@ const ItemDetail  = ({item}) => {
             <p>Detalle:{item.detalle}</p>
 
             <ItemCount stock= {item.stock} initial={0}/>
+
         </div>
     )
 }

@@ -9,7 +9,7 @@ const Item = ({ item }) => {
             <p>${item.precio}</p>
             <p>Stock Disponible: {item.stock}</p>
             <button id="buttonVerMas"><a href="ItemDetailContainer.js">Ver más</a></button>
-            <ItemCount/>
+            <ItemCount stock={item.stock} initial={0}/>
         </div>
         </div>
     )

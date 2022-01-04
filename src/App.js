@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import background from "./fondo-back.jpg";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,6 +27,7 @@ function App (){
 
     return (
         <>  
+            <BrowserRouter>
             <div style={myStyle}>
             <Header/>
             <h2 className='text-center mt-5'>Bienvenidos a Alyssa</h2>
@@ -33,6 +35,7 @@ function App (){
             <ItemDetailContainer/>
             <Footer/>
             </div>
+            </BrowserRouter>
         </>
 
     )
