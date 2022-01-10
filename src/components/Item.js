@@ -1,18 +1,30 @@
-import ItemCount from "./ItemCount";
+import React from "react";
+import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
-    return (
-        <div className="p-1">
-        <div className="text-center cardItem mx-2 h-100">
-            <h5>{item.nombre}</h5>
-            <img src={item.img} alt={item.nombre} width={100}/>
-            <p>${item.precio}</p>
-            <p>Stock Disponible: {item.stock}</p>
-            <button id="buttonVerMas"><a href="ItemDetailContainer.js">Ver más</a></button>
-            <ItemCount stock={item.stock} initial={0}/>
-        </div>
-        </div>
-    )
-}
+  return (
+    <Card style={{ width: "18rem", margin: "1rem" }}>
+      <Card.Img variant="top" src={item.img} width="100px" height="200px" />
+      <Card.Body
+        style={{
+          display: "flex",
+          flexFlow: "column",
+          flexWrap: "wrap",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <Card.Title>{item.title}</Card.Title>
+        <Card.Text>
+          <div className="text-center">Stock {item.stock} </div>
+          <div className="text-center">Precio ${item.precio}</div>
+        </Card.Text>
+        <Link className="btn btn-secondary" to={`/item/${item.id}`}>
+          Ver más
+        </Link>
+      </Card.Body>
+    </Card>
+  );
+};
 
-export default Item
+export default Item;

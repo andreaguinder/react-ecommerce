@@ -1,5 +1,7 @@
-import {useState, useEffect} from "react"
+import {React, useState, useEffect} from "react"
 import ItemDetail from "./ItemDetail"
+//import ItemCount from "./ItemCount";
+import {Link} from "react-router-dom";
 
 
 const detalle= {id: 1, stock: 5, nombre: "Cuadro 1", precio: 5000, img: "/public/img/pruebaimg.jpg", detalle: "Imitación cuadro de Dalí en Canvas de 80 x 60 cm"}
@@ -30,6 +32,9 @@ const ItemDetailContainer = () => {
     return (
         <div>
             <ItemDetail item={item}/>
+            {//<ItemCount stock={item.stock} initial={0}/>
+            }
+            <Link className='btn btn-secondary' to={`/index`}>Volver a Inicio</Link>
         </div>
     )
 }
