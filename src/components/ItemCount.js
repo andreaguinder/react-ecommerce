@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const ItemCount = ( {stock, initial, onAdd}) => {
+const ItemCount = ( {stock, initial,}) => {
 
     const [ ItemCount, setContador ] = useState(initial);
 
@@ -12,15 +12,14 @@ const ItemCount = ( {stock, initial, onAdd}) => {
     }
     const confirmarProducto = () => {
         console.log(`Confirmar cantidad: ${ItemCount}`)
-        //onAdd(contador)
     }
 
     return (
     <div className="divCentrado">
         <p>Cantidad Actual: {ItemCount}</p>
-        <button onClick={() => restarProducto()} disabled={ItemCount === initial}>-</button>
-        <button onClick={() => sumarProducto()} disabled={ItemCount >= stock}>+</button>
-        <button onClick={() => confirmarProducto()} disabled={stock === 0}>Confirmar</button>
+        <button type="button" className="btn btn-secondary" onClick={() => restarProducto()} disabled={ItemCount === initial}>-</button>
+        <button type="button" className="btn btn-secondary" onClick={() => sumarProducto()} disabled={ItemCount >= stock}>+</button>
+        <button type="button" className="btn btn-secondary" onClick={() => confirmarProducto()} disabled={stock === 0}>Confirmar</button>
         <p>
         <button> Agregar al Carrito </button>
         </p>

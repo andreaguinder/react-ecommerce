@@ -10,9 +10,10 @@ import "./components/estilos/estilos.css"
 // import './App.scss';
 import Header from "./components/Header";
 import Main from "./components/Main";
+import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Footer from "./components/Footer";
-import ItemListContainer from "./components/ItemListContainer";
+
 
 function App (){
 
@@ -32,8 +33,16 @@ function App (){
                     <h2 className='text-center mt-5'>Bienvenidos a Alyssa</h2>
                 
                 <Routes>
+                <Route path="/" element={<Main/>} />
+
+                <Route path='/categorias/:id' element={<ItemListContainer />} />
+                <Route path='/item/:id' element={<ItemDetailContainer />} />
+                    {/*
                     <Route path="/" element={<Main/>} />
-                    <Route path="/item" element={<ItemDetailContainer/>} />
+                    <Route path="/productos" element={<ItemListContainer />} />
+                    <Route path="/producto/:id" element={<ItemDetailContainer />} />
+                    <Route path="/categoria/:nombre" element={<ItemListContainer/>} />
+                    */}
                 </Routes>
                 <Footer/>
                     </div>
