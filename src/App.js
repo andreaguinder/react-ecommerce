@@ -34,15 +34,9 @@ function App (){
                 
                 <Routes>
                 <Route path="/" element={<Main/>} />
-
                 <Route path='/categoria/:id' element={<ItemListContainer />} />
                 <Route path='/item/:id' element={<ItemDetailContainer />} />
-                    {/*
-                    <Route path="/" element={<Main/>} />
-                    <Route path="/productos" element={<ItemListContainer />} />
-                    <Route path="/producto/:id" element={<ItemDetailContainer />} />
-                    <Route path="/categoria/:nombre" element={<ItemListContainer/>} />
-                    */}
+                
                 </Routes>
                 <Footer/>
                     </div>

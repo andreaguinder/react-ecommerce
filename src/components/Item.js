@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Item = ({ product }) => {
   return (
     <Card style={{ width: "18rem", margin: "1rem" }}>
+      <Card.Title className="text-center">{product.nombre}</Card.Title>
       <Card.Img variant="top" src={product.img} width="100px" height="200px" />
       <Card.Body
         style={{
@@ -14,9 +15,8 @@ const Item = ({ product }) => {
           justifyContent: "space-evenly",
         }}
       >
-        <Card.Title>{product.title}</Card.Title>
+
         <Card.Text>
-          <div className="text-center">Stock {product.stock} </div>
           <div className="text-center">Precio ${product.precio}</div>
         </Card.Text>
         <Link className="btn btn-secondary" to={`/item/${product.id}`}>
