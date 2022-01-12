@@ -12,18 +12,18 @@ const productos = [
 const ItemListContainer = ({ titulo }) => {
 
     let [lista, setLista] = useState([])
-    const { nombre } = useParams ()
+    const { id } = useParams ()
 
     
 
     useEffect(() => {
-        if(nombre){
-            let categoria = productos.filter(function(producto) {return producto["categoria"] === nombre})
+        if(id){
+            let categoria = productos.filter(function(producto) {return producto["categoria"] === id})
             setLista(categoria)
         }else{
             setLista(productos)
         }   
-    }, [nombre])
+    }, [id])
 
     return (
         <div>
