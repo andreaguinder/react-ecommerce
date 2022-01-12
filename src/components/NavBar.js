@@ -3,7 +3,6 @@ import CartWidget from "./CartWidget";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
-
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
