@@ -40,7 +40,6 @@ const ItemDetailContainer = () => {
     return (
         <div className="divCentrado">
             <ItemDetail producto={producto}/>
-            <Link className='btn btn-secondary' to={`/`}>Volver a Inicio</Link>
         </div>
     )
 }

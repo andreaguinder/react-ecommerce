@@ -3,18 +3,19 @@ import ItemCount from "./ItemCount";
 
 const ItemDetail  = ({producto, onAdd, agregado}) => {
     return (
-        <div>
+        <div className="divCentrado">
             <h3>{producto.nombre}</h3>
-            <img src={producto.img} alt={producto.nombre} width="50%"/>
-
-            <p>Precio:{producto.precio}</p>
-            <p>Detalle:{producto.detalle}</p>
-            { agregado ? 
+            <span className="text-center"><img src={producto.img} alt={producto.nombre} width="50%"/></span>
+            <div>
+            <span className="text-center"><p>Precio: ${producto.precio} </p></span>
+            <span className="text-center"><p>{producto.detalle}</p></span></div>
+            <div className="text-center divCentrado">{ agregado ? 
                         <button className="btn btn-secondary">
                             <Link to='/carrito'>Ir al carrito</Link>        
                         </button>
                         
-                        : <ItemCount stock= {producto.stock} initial={1} onAdd={onAdd} />}
+                        : <ItemCount stock= {producto.stock} initial={1} onAdd={onAdd} />}</div> 
+                        <Link className='btn btn-secondary' to={`/`}>Volver a Inicio</Link>
         </div>
     )
 }
