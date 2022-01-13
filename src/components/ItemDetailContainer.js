@@ -13,7 +13,7 @@ let productos= [
 ]
 
 const ItemDetailContainer = () => {
-
+    const [added, setAdded] = useState(false);
     const { id } = useParams()
 
     let [producto, setProducto] = useState({})
@@ -36,10 +36,15 @@ const ItemDetailContainer = () => {
 
 }, [id])
 
+const onAdd = (count) => {
+    console.log(`Agregaste ${producto.nombre}, cantidad: ${count}.`);
+    setAdded(true); // seteo en tru cuando es agregado el producto
+  }
+
 
     return (
         <div className="divCentrado">
-            <ItemDetail producto={producto}/>
+            <ItemDetail onAdd={onAdd} producto={producto} added={added}/>
         </div>
     )
 }
