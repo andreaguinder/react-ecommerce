@@ -38,7 +38,7 @@ function App ({greeting}) {
                 <Route path="/" element={<Main/>} />
                 <Route path='/categoria/:id' element={<ItemListContainer />} />
                 <Route path='/item/:id' element={<ItemDetailContainer />} />
-                <Route path='/Carrito.js' element={<Carrito/>} />
+                <Route path='/Carrito' element={<Carrito/>} />
                 
                 </Routes>
                 <Footer/>

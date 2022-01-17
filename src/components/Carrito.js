@@ -4,22 +4,22 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext'
 import CartItem from './CartItem';
 
-const Carrito = () => {
+const CartContainer = () => {
 
     const { cartArray, deleteItem } = useContext(CartContext);
 
     return (
-        <div>
-            {cartArray.length === 0 &&
-        <div>
-          <p>El carrito está vacío</p>
-          <Link to='/'>Ir al inicio</Link>
-        </div>
-      }
-      {(cartArray.length > 0) && cartArray.map(prod => <CartItem key={prod.item.id} product={prod} deleteItem={deleteItem} />)}
-        </div>
+      <div>
+        {cartArray.length === 0 &&
+          <div>
+            <p>No hay productos aún</p>
+            <Link to='/'>Ir al inicio</Link>
+          </div>
+        }
+        {(cartArray.length > 0) && cartArray.map(product => <CartItem key={product.item.id} product={product} deleteItem={deleteItem} />)}
+      </div>
     )
-}
-
-export default Carrito
+  }
+  
+  export default CartContainer;
 

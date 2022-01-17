@@ -12,9 +12,9 @@ const NavBar = () => {
 
     return (
         <>
-    <Navbar expand="lg">
+    <Navbar>
       <Container fluid>
-        <Navbar.Brand as='span'><Link to='/public/logo-alyssa.png'></Link></Navbar.Brand>
+      <Navbar.Brand as='span'><Link to='/public/logo-alyssa.png'></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar" />
         <Navbar.Collapse id="navbar">
           <Nav className="me-auto my-2 my-lg-0">

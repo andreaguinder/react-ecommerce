@@ -27,18 +27,13 @@ header{
     box-shadow: 0px 5px 7px 0px rgba(59, 59, 59, 0.75);
     align-items: center;
 
-    div{
-        width: 33%;
-        align-items: center;
-        
-    }
-
-    icon{
-        width: 1rem;
-    }
+        icon{
+            margin-top: 1rem;
+            width: 1rem;
+        }
 }
 
-footer{
+#footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -98,4 +93,14 @@ footer{
     .linkCate{
         font-size: 1rem;
     }
+
+
+}
+
+.linksEstilo:hover{
+    color:gray;
+}
+
+#navbarDropdown:hover{
+    color:gray;
 }

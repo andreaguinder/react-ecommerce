@@ -1,6 +1,8 @@
 import {React, useState, useEffect} from "react"
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
+import {useContext} from "react";
+import {CartContext} from "../context/CartContext";
 
 
 let productos= [
@@ -13,9 +15,12 @@ let productos= [
 
 const ItemDetailContainer = () => {
     const [added, setAdded] = useState(false);
+    const {addToCart} = useContext(CartContext);
     const { id } = useParams()
 
     let [producto, setProducto] = useState({})
+
+
 
     useEffect(() => {
 
@@ -33,10 +38,10 @@ const ItemDetailContainer = () => {
     }
     
 
-}, [id])
+}, [id]);
 
 const onAdd = (count) => {
-    console.log(`Agregaste ${producto.nombre}, cantidad: ${count}.`);
+    addToCart(producto, count);
     setAdded(true);
   }
 

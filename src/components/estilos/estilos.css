@@ -26,15 +26,12 @@ header {
   box-shadow: 0px 5px 7px 0px rgba(59, 59, 59, 0.75);
   align-items: center;
 }
-header div {
-  width: 33%;
-  align-items: center;
-}
 header icon {
+  margin-top: 1rem;
   width: 1rem;
 }
 
-footer {
+#footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -45,7 +42,7 @@ footer {
   text-decoration: none;
   box-shadow: 5px 0px 7px 0px rgba(59, 59, 59, 0.75);
 }
-footer div {
+#footer div {
   flex-direction: horizontal;
   flex-wrap: wrap;
   align-content: center;
@@ -91,4 +88,12 @@ footer div {
 }
 .linksEstilo .linkCate, #navbarDropdown .linkCate {
   font-size: 1rem;
+}
+
+.linksEstilo:hover {
+  color: gray;
+}
+
+#navbarDropdown:hover {
+  color: gray;
 }/*# sourceMappingURL=estilos.css.map */

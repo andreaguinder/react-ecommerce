@@ -1,21 +1,16 @@
 import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
-const CartItem = ({ product, deleteItem }) => {
+const CartItem = ({ producto, deleteItem }) => {
   return (
     <Card body>
       <Container>
         <Row>
-          <Col>{product.item.title}</Col>
-          <Col>Cantidad :{product.count}</Col>
-          <Col>${product.item.price}</Col>
+          <Col>{producto.item.nombre}</Col>
+          <Col>Cantidad :{producto.count}</Col>
+          <Col>${producto.item.precio}</Col>
           <Col>
-            <Button
-              className="buttonVerMas"
-              onClick={() => deleteItem(product.item.id)}
-            >
-              Delete
-            </Button>
+            <Button className="buttonVerMas" onClick={() => deleteItem(producto.id)}>Borrar Item</Button>
           </Col>
         </Row>
       </Container>
