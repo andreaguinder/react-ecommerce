@@ -13,6 +13,7 @@ import Main from "./components/Main";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Footer from "./components/Footer";
+import Carrito from "./components/Carrito";
 
 
 function App (){
@@ -28,7 +29,7 @@ function App (){
     return (
         <>  
             <BrowserRouter>
-                    <div style={myStyle}>
+                <div style={myStyle}>
                 <Header/>
                     <h2 className='text-center mt-5'>Bienvenidos a Alyssa</h2>
                 
@@ -36,10 +37,11 @@ function App (){
                 <Route path="/" element={<Main/>} />
                 <Route path='/categoria/:id' element={<ItemListContainer />} />
                 <Route path='/item/:id' element={<ItemDetailContainer />} />
+                <Route path='/Carrito.js' element={<Carrito/>} />
                 
                 </Routes>
                 <Footer/>
-                    </div>
+                </div>
 
             </BrowserRouter>
         </>
