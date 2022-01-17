@@ -1,7 +1,6 @@
 import {React, useState, useEffect} from "react"
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
-import {Link} from "react-router-dom";
 
 
 let productos= [
@@ -38,7 +37,7 @@ const ItemDetailContainer = () => {
 
 const onAdd = (count) => {
     console.log(`Agregaste ${producto.nombre}, cantidad: ${count}.`);
-    setAdded(true); // seteo en tru cuando es agregado el producto
+    setAdded(true);
   }
 
 
