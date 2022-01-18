@@ -11,7 +11,7 @@ const CartItem = ({ producto, borrarItem }) => {
           <Col>Cantidad :{producto.count}</Col>
           <Col>${producto.item.precio}</Col>
           <Col>
-            <Button className="buttonVerMas" onClick={() => borrarItem(producto.id)}>Borrar Item</Button>
+            <Button className="buttonVerMas" onClick={() => borrarItem(producto.nombre)}>Borrar Item</Button>
           </Col>
         </Row>
       </Container>

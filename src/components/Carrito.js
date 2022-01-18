@@ -1,25 +1,26 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import CartItem from './CartItem'
+
 import { CartContext } from './CartContext'
-import { Button } from 'react-bootstrap';
+import { Link } from "react-router-dom"
+import CartItem from "./CartItem"
 
 const CarritoContainer = () => {
 
-    const { cartArray, borrarItem } = useContext(CartContext)
+    const { cartArray, borrarItem, borrarTodo } = useContext(CartContext)
 
-    return (        
-        <div>
-            {cartArray.length ===  0 && 
-                <div className='d-flex flex-column justify-content-center'>
-                    <h2 className='mb-5'>No hay nada en el carrito</h2>
-                    <Link to="/"><Button className=' btn-secondary buttonVerMas'>Ir al inicio</Button></Link>
-                </div>
-            }
-            {(cartArray.length > 0) && cartArray.map(prod => <CartItem key={prod.item.id} productos={prod} borrarItem={borrarItem} /> )}
-        </div>
-    )
+    if(cartArray.length === 0) {
+        return(
+            <div>
+                <h2>No se han agregado productos aún</h2>
+                <Link to={"/"} className='btn-secondary btn buttonVerMas'>Ir al inicio</Link>
+            </div>
+        )
+    }
+    else {
+        return (
+            cartArray.map((producto) => <CartItem key={producto.item.id} producto={producto} borrarItem={borrarItem} borrarTodo={borrarTodo} />)
+        )
+    }
 }
 
 export default CarritoContainer;
-
