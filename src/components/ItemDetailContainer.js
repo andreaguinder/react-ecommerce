@@ -3,6 +3,8 @@ import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
 
 
+
+
 let productos= [
     {id: 1, stock: 5, nombre: "Cuadro Dalí", precio: 5000, img: "/img/pruebaimg.jpg", categoria: "cuadros", detalle: "Cuadro imitación Dalí realizado en Canvas de pared de 60 cm x 80 cm."},
     {id: 2, stock: 4, nombre: "Anotadores s/e", precio: 500, img: "/img/anotadores.jpg", categoria: "papeleria", detalle: "Anotadores sin elección de motivo, diseño zen, de 10 cm x 15 cm x 80 hojas lisas anillado superior"},
@@ -14,8 +16,7 @@ let productos= [
 const ItemDetailContainer = () => {
     const [added, setAdded] = useState(false);
     const { id } = useParams()
-
-    let [producto, setProducto] = useState({})
+    const [producto, setProducto] = useState({})
 
     useEffect(() => {
 
@@ -35,8 +36,8 @@ const ItemDetailContainer = () => {
 
 }, [id])
 
-const onAdd = (stock) => {
-    addItem(producto, stock);
+const onAdd = (count) => {
+
     setAdded(true); 
   }
 
