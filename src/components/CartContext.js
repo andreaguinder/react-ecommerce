@@ -6,14 +6,14 @@ const CartProvider = ({ children }) => {
 
     const [cartArray, setcartArray] = useState([])
 
-    const addtoCart = (detalleProductos, contador) => {
-        if(isInCart(detalleProductos.id)) {
+    const addtoCart = (product, count) => {
+        if(isInCart(product.id)) {
             console.log("ya está el producto en el carrito");
         } else {
-            console.log(`Agregaste ${detalleProductos.desc}, cantidad: ${contador}.`);
+            console.log(`Agregaste ${product.nombre}, Cantidad: ${count}, Precio: $${product.precio}C/U. `);
             const newObj = {
-                item: detalleProductos,
-                contador
+                item: product,
+                count
             }
             setcartArray([...cartArray, newObj])
         }
