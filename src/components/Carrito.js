@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import CartItem from './CartItem'
-import { contextCarrito } from './CartContext'
+import { CartContext } from './CartContext'
 import { Button } from 'react-bootstrap';
 
 const CarritoContainer = () => {
 
-    const { cartArray, borrarItem } = useContext(contextCarrito)
+    const { cartArray, borrarItem } = useContext(CartContext)
 
     return (        
         <div>
