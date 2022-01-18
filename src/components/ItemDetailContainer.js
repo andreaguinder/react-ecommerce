@@ -1,9 +1,7 @@
-import {React, useState, useEffect} from "react"
+import {useContext, useState, useEffect} from "react"
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
-import {useContext} from "react";
-import {CartContext} from "../context/CartContext";
-
+import {contextCarrito} from "./CartContext";
 
 let productos= [
     {id: 1, stock: 5, nombre: "Cuadro Dalí", precio: 5000, img: "/img/pruebaimg.jpg", categoria: "cuadros", detalle: "Cuadro imitación Dalí realizado en Canvas de pared de 60 cm x 80 cm."},
@@ -15,7 +13,7 @@ let productos= [
 
 const ItemDetailContainer = () => {
     const [added, setAdded] = useState(false);
-    const {addToCart} = useContext(CartContext);
+    const {addToCart} = useContext(contextCarrito);
     const { id } = useParams()
 
     let [producto, setProducto] = useState({})

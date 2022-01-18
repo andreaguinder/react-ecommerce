@@ -14,7 +14,7 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Footer from "./components/Footer";
 import Carrito from "./components/Carrito";
-import CartProvider from './context/CartContext';
+import CartProvider from './components/CartContext';
 
 function App ({greeting}) {
 
