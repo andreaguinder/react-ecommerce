@@ -13,12 +13,13 @@ const ItemCount = ( {stock, initial, onAdd}) => {
 
     return (
     <div className="divCentrado">
-        <p>Cantidad Actual: {contador}</p>
-        <button type="button" className="btn btn-secondary" onClick={() => restarProducto()} disabled={contador === initial}>-</button>
-        <button type="button" className="btn btn-secondary" onClick={() => sumarProducto()} disabled={contador >= stock}>+</button>
-        <button type="button" className="btn btn-secondary" onClick={() => onAdd(contador)}>Agregar al carrito</button>
+        <button type="button" className="btn btn-secondary px-3 my-3" onClick={() => restarProducto()} disabled={contador === initial}> - </button>
+        <p className="linksEstilo">{contador}</p>
+        <button type="button" className="btn btn-secondary px-3 my-3" onClick={() => sumarProducto()} disabled={contador >= stock}> + </button>
+
+        <button type="button" className="btn btn-secondary p-2" onClick={() => onAdd(contador)}>Agregar al carrito</button>
     </div>
     )
 }
 
-export default ItemCount
+export default ItemCount;

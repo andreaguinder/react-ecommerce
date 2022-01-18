@@ -1,8 +1,7 @@
+
 import {React, useState, useEffect} from "react"
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
-
-
 
 
 let productos= [
@@ -13,11 +12,15 @@ let productos= [
     {id: 5, stock: 2, nombre: "Cuadro Naturaleza", precio: 800, img: "/img/fondo 2.jpg", categoria: "cuadros", detalle: "Cuadro inspirado en la Naturaleza pero con una simbología de ambigüedad en sus colores siendo magenta y cyan, de 50 cm x 65 cm."}
 ]
 
+
 const ItemDetailContainer = () => {
     const [added, setAdded] = useState(false);
     const { id } = useParams()
     const [producto, setProducto] = useState({})
 
+    const onAdd = () => {
+        setAdded(true);
+      }
     useEffect(() => {
 
      if(id){
@@ -36,10 +39,9 @@ const ItemDetailContainer = () => {
 
 }, [id])
 
-const onAdd = (count) => {
 
-    setAdded(true); 
-  }
+
+
 
 
     return (
@@ -49,4 +51,5 @@ const onAdd = (count) => {
     )
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
+

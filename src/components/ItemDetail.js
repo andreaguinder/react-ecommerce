@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import ItemCount from "./ItemCount";
 
+
 const ItemDetail  = ({producto, onAdd, added}) => {
+
+    
+
     return (
         <Container>
             <Row>
@@ -27,4 +31,6 @@ const ItemDetail  = ({producto, onAdd, added}) => {
     )
 }
 
-export default ItemDetail 
+export default ItemDetail;
+
+
