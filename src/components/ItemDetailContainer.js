@@ -35,9 +35,9 @@ const ItemDetailContainer = () => {
 
 }, [id])
 
-const onAdd = (count) => {
-    
-    setAdded(true);
+const onAdd = (stock) => {
+    addItem(producto, stock);
+    setAdded(true); 
   }
 
 
