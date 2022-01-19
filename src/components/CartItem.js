@@ -11,7 +11,7 @@ const CartItem = ({ producto, borrarItem, borrarTodo }) => {
           <Col>Cantidad :{producto.count}</Col>
           <Col>${producto.item.precio}</Col>
           <Col>
-            <Button className="buttonVerMas btn-secondary btn" onClick={() => borrarItem((producto.count) - 1)}>Borrar Item</Button>
+            <Button className="buttonVerMas btn-secondary btn" onClick={() => borrarItem(producto.item.nombre)}>Borrar Item</Button>
           </Col>
         </Row>
       </Container>

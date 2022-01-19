@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 export const CartContext = createContext();
 
@@ -6,15 +6,20 @@ export const CartContext = createContext();
 const CartProvider = ({ children }) => {
 
     const [cartArray, setCartArray] = useState([])
+    const [cantidadTotal, setCantidadTotal] = useState(0)
 
     const addtoCart = (product, count) => {
         if (isInCart(product.id)) {
+            const indexActualizar = cartArray.findIndex(el => el.item.id === product.id)
+            cartArray[indexActualizar].count = cartArray[indexActualizar].count + count
             console.log('El producto ya se encuentra en el carrito.');
+
+
         } else {
             console.log(`Agregaste ${product.nombre}, cantidad: ${count}.`);
             const newObj = {
-              item: product,
-              count
+                item: product,
+                count
             }
             setCartArray([...cartArray, newObj])
         }
@@ -34,12 +39,27 @@ const CartProvider = ({ children }) => {
         return cartArray.some(el => el.item.id === id)
     }
 
+
+    useEffect(() => {
+        if(cartArray.length > 0){
+            let cantidad = 0
+            cartArray.forEach(item => cantidad = cantidad + item.count)
+            setCantidadTotal(cantidad)
+        }else{
+            setCantidadTotal(0)
+        }
+
+
+    },[cartArray])
+
+
     const contadorProductos = () => {
         return cartArray.reduce((accum, item) => accum = accum + item.contador, 0)
     }
 
     const value = {
         cartArray,
+        cantidadTotal,
         addtoCart,
         borrarItem,
         borrarTodo,
