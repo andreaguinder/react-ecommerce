@@ -7,7 +7,7 @@ import { Button } from "react-bootstrap";
 
 const CarritoContainer = () => {
 
-    const { cartArray, borrarItem, borrarTodo } = useContext(CartContext)
+    const { cartArray, borrarItem, borrarTodo, precioTotal} = useContext(CartContext)
     
             if (cartArray.length === 0){
                 return(
@@ -24,7 +24,7 @@ const CarritoContainer = () => {
                     </div>
                     <div className='divCentrado'>
                     <Button className='btn btn-secondary buttonVerMas m-1' onClick={borrarTodo}>Vaciar Carrito</Button>
-                    <Button className='btn btn-secondary buttonVerMas m-1' onClick={borrarTodo}>Terminar compra</Button>
+                    <Button className='btn btn-secondary buttonVerMas m-1' onClick={precioTotal}>Terminar compra</Button>
                     </div>
                     </>
                 )

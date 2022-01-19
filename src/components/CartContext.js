@@ -57,13 +57,18 @@ const CartProvider = ({ children }) => {
         return cartArray.reduce((accum, item) => accum = accum + item.count, 0)
     }
 
+    const precioTotal = () => {
+        return cartArray.reduce((accum, el) => accum = accum + (el.item.precio*el.count), 0)
+    }
+
     const value = {
         cartArray,
         cantidadTotal,
         addtoCart,
         borrarItem,
         borrarTodo,
-        contadorProductos
+        contadorProductos,
+        precioTotal
     }
 
 
