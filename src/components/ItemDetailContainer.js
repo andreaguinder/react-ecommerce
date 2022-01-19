@@ -2,6 +2,8 @@
 import {React, useState, useEffect} from "react"
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
 
 let productos= [
@@ -17,10 +19,8 @@ const ItemDetailContainer = () => {
     const [added, setAdded] = useState(false);
     const { id } = useParams()
     const [producto, setProducto] = useState({})
+    const { addtoCart } = useContext(CartContext);
 
-    const onAdd = () => {
-        setAdded(true);
-      }
     useEffect(() => {
 
      if(id){
@@ -39,9 +39,10 @@ const ItemDetailContainer = () => {
 
 }, [id])
 
-
-
-
+const onAdd = (count) => {
+    addtoCart(producto, count);
+    setAdded(true); 
+  }
 
 
     return (
@@ -52,4 +53,7 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer;
+
+
+
 
