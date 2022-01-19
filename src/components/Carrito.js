@@ -3,6 +3,7 @@ import { CartContext } from './CartContext'
 import { Link } from "react-router-dom"
 import CartItem from "./CartItem"
 import { Button } from "react-bootstrap";
+import TotalTodo from "./TotalTodo";
 
 
 const CarritoContainer = () => {
@@ -22,6 +23,7 @@ const CarritoContainer = () => {
                     <div>
                     {cartArray.map(producto => <CartItem key={producto.item.id} producto={producto} borrarItem={borrarItem}/>)}
                     </div>
+                    <TotalTodo />
                     <div className='divCentrado'>
                     <Button className='btn btn-secondary buttonVerMas m-1' onClick={borrarTodo}>Vaciar Carrito</Button>
                     <Button className='btn btn-secondary buttonVerMas m-1' onClick={precioTotal}>Terminar compra</Button>
@@ -30,6 +32,5 @@ const CarritoContainer = () => {
                 )
             }
 }
-
 
 export default CarritoContainer;
