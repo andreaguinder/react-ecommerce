@@ -3,7 +3,7 @@ import { Col, Container } from 'react-bootstrap';
 const FooterConst = () => {
     return (
     <>
-    <Container id='footer' fluid style={{width: "100", height: "auto", marginBottom: "0", flexBasis: "basis"}}>
+    <Container id='footer' fluid style={{width: "100", height: "auto", marginBottom: "0", alignSelf: "flex-end"}}>
                 <Col style={{display: "flex", flexFlow: "column", flexWrap: "wrap", justifyContent: "space-evenly",}}>
                     <Link to='#' className="linksEstilo">Legales</Link>
                     <Link to='#' className="linksEstilo">Nosotros</Link>
