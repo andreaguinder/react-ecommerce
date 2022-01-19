@@ -9,7 +9,7 @@ import { Container, Col, Row } from "react-bootstrap"
 const Header = () => {
     return (
         <header>
-            <Container className="my-2">
+            <Container className="my-1">
                 <Row>
                 <Col className="my-3">
                 <Link to='https://www.facebook.com/profile.php?id=100010447723135' className="linksEstilo"><FontAwesomeIcon icon={faFacebook}/></Link>
@@ -17,7 +17,7 @@ const Header = () => {
                 <Link to='https://www.behance.net/andreaguinder' className="linksEstilo"><FontAwesomeIcon icon={faBehance}/></Link>
                 </Col>
                 <Col>
-                <Link to='/public/logo-alyssa.png'></Link>
+                <Link to='/'><img src="/logo-alyssa.png" style={{width: "40%"}}></img></Link>
             </Col>
             <Col>
             <NavBar/>

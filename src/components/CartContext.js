@@ -54,7 +54,7 @@ const CartProvider = ({ children }) => {
 
 
     const contadorProductos = () => {
-        return cartArray.reduce((accum, item) => accum = accum + item.contador, 0)
+        return cartArray.reduce((accum, item) => accum = accum + item.count, 0)
     }
 
     const value = {

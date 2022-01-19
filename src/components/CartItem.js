@@ -2,7 +2,7 @@
 import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
-const CartItem = ({ producto, borrarItem, borrarTodo }) => {
+const CartItem = ({ producto, borrarItem }) => {
   return (
     <Card>
       <Container>
@@ -11,13 +11,10 @@ const CartItem = ({ producto, borrarItem, borrarTodo }) => {
           <Col>Cantidad :{producto.count}</Col>
           <Col>${producto.item.precio}</Col>
           <Col>
-            <Button className="buttonVerMas btn-secondary btn" onClick={() => borrarItem(producto.item.nombre)}>Borrar Item</Button>
+            <Button className="buttonVerMas btn-secondary btn" onClick={() => borrarItem(producto.item.id)}>Borrar Item</Button>
           </Col>
         </Row>
       </Container>
-      <Row>
-        <Button className="buttonVerMas btn-secondary btn" style={{alignItems: 'center', justifyContent: 'space-around', width: '10%', margin: '0.5rem'}} onClick={() => borrarTodo(producto.nombre)}>Vaciar Carrito</Button>
-      </Row>
     </Card>
   );
 };

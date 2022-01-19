@@ -20,7 +20,7 @@ function App ({greeting}) {
 
     const myStyle={ 
         backgroundImage: `url(${background})`, 
-        height:'auto',
+        height:'100vh',
         backgroundSize: 'cover',
         backgroundRepeat: 'repeat-y',
         overflowX: 'hidden'

@@ -12,13 +12,13 @@ const NavBar = () => {
       <Navbar.Brand as='span'><Link to='/public/logo-alyssa.png'></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar" />
         <Navbar.Collapse id="navbar">
-          <Nav className="me-auto my-2 my-lg-0">
+          <Nav className="me-auto">
             <Nav.Link><Link to='/' className="linksEstilo">Inicio</Link></Nav.Link>
             <Nav.Link><Link to='/src/components/Carrito.js' className="linksEstilo"><CartWidget/></Link></Nav.Link>
             <NavDropdown title="Categorías" id="navbarDropdown" className="linksEstilo">
-              <NavDropdown.Item as='span'><Link to='/categoria/cuadros' className="linksEstilo linkCate">Cuadros</Link></NavDropdown.Item>
-              <NavDropdown.Item as='span'><Link to='/categoria/velasYaroma' className="linksEstilo linkCate">Velas y Aromatizantes</Link></NavDropdown.Item>
-              <NavDropdown.Item as='span'><Link to='/categoria/papeleria' className="linksEstilo linkCate">Papelería</Link></NavDropdown.Item>
+            <Link to='/categoria/cuadros' className="linksEstilo linkCate"><NavDropdown.Item as='span'>Cuadros</NavDropdown.Item></Link>
+            <Link to='/categoria/velasYaroma' className="linksEstilo linkCate"><NavDropdown.Item as='span'>Velas y Aromatizantes</NavDropdown.Item></Link>
+            <Link to='/categoria/papeleria' className="linksEstilo linkCate"><NavDropdown.Item as='span'>Papelería</NavDropdown.Item></Link>
             </NavDropdown>
 
           </Nav>
