@@ -8,6 +8,7 @@ import { Container, Col, Row } from "react-bootstrap"
 
 const Header = () => {
     return (
+    <>
         <header>
             <Container className="my-1">
                 <Row>
@@ -17,14 +18,15 @@ const Header = () => {
                 <Link to='https://www.behance.net/andreaguinder' className="linksEstilo"><FontAwesomeIcon icon={faBehance}/></Link>
                 </Col>
                 <Col>
-                <Link to='/'><img src="/logo-alyssa.png" style={{width: "40%"}}></img></Link>
+                <Link to='/'><img src="/logo-alyssa.png" alt="Logo Alyssa" style={{width: "40%"}}></img></Link>
             </Col>
             <Col>
             <NavBar/>
             </Col>
             </Row>
             </Container>
-            </header>
+        </header>
+    </>
     )
 }
 

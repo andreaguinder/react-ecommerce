@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ product }) => {
   return (
+    <>
     <Card style={{ width: "18rem", margin: "1rem" }}>
       <Card.Title className="text-center m-3">{product.nombre}</Card.Title>
       <Container height="400px">
@@ -26,6 +27,7 @@ const Item = ({ product }) => {
         </Link>
       </Card.Body>
     </Card>
+    </>
   );
 };
 

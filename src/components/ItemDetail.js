@@ -9,6 +9,7 @@ const ItemDetail  = ({producto, onAdd, added}) => {
     
 
     return (
+    <>
         <Container>
             <Row>
                 <Col><h3>{producto.nombre}</h3>
@@ -28,6 +29,7 @@ const ItemDetail  = ({producto, onAdd, added}) => {
                 </Col>
             </Row>
         </Container>
+    </>
     )
 }
 
