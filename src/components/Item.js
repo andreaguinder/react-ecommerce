@@ -1,12 +1,14 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Item = ({ product }) => {
   return (
     <Card style={{ width: "18rem", margin: "1rem" }}>
-      <Card.Title className="text-center">{product.nombre}</Card.Title>
-      <Card.Img variant="top" src={product.img} width="100px" height="200px" />
+      <Card.Title className="text-center m-3">{product.nombre}</Card.Title>
+      <Container height="400px">
+      <Card.Img variant="top" src={product.img} width="auto" height="300px" overflow-y="hidden" />
+      </Container>
       <Card.Body
         style={{
           display: "flex",

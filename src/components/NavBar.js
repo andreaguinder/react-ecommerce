@@ -16,9 +16,9 @@ const NavBar = () => {
             <Nav.Link><Link to='/' className="linksEstilo">Inicio</Link></Nav.Link>
             <Nav.Link><Link to='/src/components/Carrito.js' className="linksEstilo"><CartWidget/></Link></Nav.Link>
             <NavDropdown title="Categorías" id="navbarDropdown" className="linksEstilo">
-            <Link to='/categoria/cuadros' className="linksEstilo linkCate"><NavDropdown.Item as='span'>Cuadros</NavDropdown.Item></Link>
-            <Link to='/categoria/velasYaroma' className="linksEstilo linkCate"><NavDropdown.Item as='span'>Velas y Aromatizantes</NavDropdown.Item></Link>
-            <Link to='/categoria/papeleria' className="linksEstilo linkCate"><NavDropdown.Item as='span'>Papelería</NavDropdown.Item></Link>
+            <Link to='/categoria/Cuadros' className="linksEstilo linkCate"><NavDropdown.Item as='span'>Cuadros</NavDropdown.Item></Link>
+            <Link to='/categoria/Velas y Aromatizantes' className="linksEstilo linkCate"><NavDropdown.Item as='span'>Velas y Aromatizantes</NavDropdown.Item></Link>
+            <Link to='/categoria/Papelería' className="linksEstilo linkCate"><NavDropdown.Item as='span'>Papelería</NavDropdown.Item></Link>
             </NavDropdown>
 
           </Nav>

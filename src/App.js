@@ -32,7 +32,7 @@ function App ({greeting}) {
             <BrowserRouter>
                 <div style={myStyle}>
                 <Header/>
-                    <h2 className='text-center mt-5'>{greeting="Bienvenidos a Alyssa"}</h2>
+                    <h2 className='text-center mt-5'>{greeting="Todo para tu espacio Zen"}</h2>
                 
                 <Routes>
                 <Route path="/" element={<Main/>} />
