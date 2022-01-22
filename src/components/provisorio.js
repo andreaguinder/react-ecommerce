@@ -184,6 +184,8 @@ const productos = [
   },
 ];
 
+
+
 let productos = [
   {
     id: 1,
