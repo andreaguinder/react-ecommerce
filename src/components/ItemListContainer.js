@@ -3,7 +3,7 @@ import ItemList from "./ItemList"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import {db} from "./firebase"
-import { collection, getDocs, getDoc } from "firebase/firestore"
+import { collection, getDocs } from "firebase/firestore"
 
 /*
 const productos = [
