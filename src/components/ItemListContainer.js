@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"
 import {db} from "./firebase"
 import { collection, getDocs, getDoc } from "firebase/firestore"
 
-/*
+
 const productos = [
     {id: 1, nombre: "Sueño causado por el vuelo...", precio: 5000, img: "/img/pruebaimg.jpg", categoria: "Cuadros"},
     {id: 2, nombre: "Anotador S/E", precio: 500, img: "/img/anotadores.jpg", categoria: "Papelería"},
@@ -33,53 +33,14 @@ const productos = [
     {id: 25, nombre: "Cuadro Calado en 3", precio: 12000, img: "/img/caladoentres.jpg", categoria: "Cuadros"},
     {id: 26, stock: 10, nombre: "Velas Aromat. en f/vidrio", precio: 1200, img: "/img/velassojaaroma.jpg", categoria: "Velas y Aromatizantes"}
 ]
-*/
-
-/*
-const ItemListContainer = ({ greeting }) => {
 
 
-    const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
-    const {id} = useParams()
 
-useEffect(() => {
-
-const coleccionProductos = collection(db, "productos")
-const pedido = getDocs(coleccionProductos)
-
-    pedido
-        .then((resultado) =>{
-            const docs = resultado.docs
-            const docs_formateado = docs.map(doc=>{
-                const producto = {
-                    id : doc.id,
-                    ...doc.data()
-                }
-                return producto
-            })
-            setProductos(docs_formateado)
-            setLoading(false)
-        })
-        .catch((error) =>{
-            console.log(error)
-        })
-
-    })
-
-}
-
-export default ItemListContainer;
-*/
-
-/*
 const ItemListContainer = ({ titulo }) => {
 
 
     let [lista, setLista] = useState([])
     const { id } = useParams ()
-
-    
 
     useEffect(() => {
         if(id){
@@ -100,9 +61,10 @@ const ItemListContainer = ({ titulo }) => {
 
 export default ItemListContainer;
 
-*/
 
-const ItemListContainer = ({ greeting }) => {
+
+/*
+const ItemListContainer = ({ titulo }) => {
 
 
     const [lista, setLista] = useState([])
@@ -135,3 +97,4 @@ const pedido = getDocs(coleccionProductos)
 }
 
 export default ItemListContainer;
+*/
