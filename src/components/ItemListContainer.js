@@ -136,7 +136,7 @@ export default ItemListContainer;
 
 const ItemListContainer = ({titulo}) => {
 
-    const [productos, setProductos] = useState([])
+    const [lista, setLista] = useState([])
     const {id} = useParams()
 
     
@@ -148,7 +148,7 @@ const ItemListContainer = ({titulo}) => {
             const pedido = getDocs(consulta)
             pedido
                 .then((resultado)=>{
-                    setProductos(resultado.docs.map(doc=>({id : doc.id,...doc.data()})))
+                    setLista(resultado.docs.map(doc=>({id : doc.id,...doc.data()})))
                 })
                 .catch((error)=>{
                     console.log(error)
@@ -159,7 +159,7 @@ const ItemListContainer = ({titulo}) => {
             const pedido = getDocs(coleccionProductos)
             pedido
                 .then((resultado)=>{
-                    setProductos(resultado.docs.map(doc=>({id : doc.id,...doc.data()})))
+                    setLista(resultado.docs.map(doc=>({id : doc.id,...doc.data()})))
                 })
                 .catch((error)=>{
                     console.log(error)
@@ -170,7 +170,7 @@ const ItemListContainer = ({titulo}) => {
     return (
         <div>
             <h2>{titulo}</h2>
-            <ItemList productos={productos}/>
+            <ItemList lista={lista}/>
         </div>
     )
 

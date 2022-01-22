@@ -1,9 +1,9 @@
 import ItemListContainer from "./ItemListContainer"
 
-const Main = (productos) => {
+const Main = (lista) => {
     return (
         <main className="mt-3">
-            <ItemListContainer productos={productos} />
+            <ItemListContainer lista={lista} />
         </main>
     )
 }
