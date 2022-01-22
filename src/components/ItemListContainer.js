@@ -34,6 +34,8 @@ const productos = [
     {id: 26, stock: 10, nombre: "Velas Aromat. en f/vidrio", precio: 1200, img: "/img/velassojaaroma.jpg", categoria: "Velas y Aromatizantes"}
 ]
 */
+
+/*
 const ItemListContainer = ({ greeting }) => {
 
 
@@ -68,6 +70,8 @@ const pedido = getDocs(coleccionProductos)
 }
 
 export default ItemListContainer;
+*/
+
 /*
 const ItemListContainer = ({ titulo }) => {
 
@@ -94,6 +98,40 @@ const ItemListContainer = ({ titulo }) => {
     )
 }
 
-export default ItemListContainer:
+export default ItemListContainer;
 
 */
+
+const ItemListContainer = ({ greeting }) => {
+
+
+    const [lista, setLista] = useState([])
+    const {id} = useParams()
+
+useEffect(() => {
+
+const coleccionProductos = collection(db, "productos")
+const pedido = getDocs(coleccionProductos)
+
+    pedido
+        .then((resultado) =>{
+            const docs = resultado.docs
+            const docs_formateado = docs.map(doc=>{
+                const producto = {
+                    id : doc.id,
+                    ...doc.data()
+                }
+                return producto
+            })
+            setLista(docs_formateado)
+
+        })
+        .catch((error) =>{
+            console.log(error)
+        })
+
+    })
+
+}
+
+export default ItemListContainer;
