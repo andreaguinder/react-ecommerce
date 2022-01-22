@@ -1,9 +1,9 @@
 import Item from "./Item"
 
-const ItemList = ({lista}) => {
+const ItemList = ({productos}) => {
     return (
         <div className="divCentrado justify-content-around">
-            {lista.map((item,index)=>{
+            {productos.map((item,index)=>{
                 return <Item key={index} product={item}/>
             })}
         </div>

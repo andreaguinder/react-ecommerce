@@ -4,8 +4,10 @@ import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
+import { db } from "./firebase"
+import { collection, getDoc , doc } from "firebase/firestore"
 
-
+/*
 let productos= [
     {id: 1, stock: 5, nombre: "Sueño causado por el vuelo...", precio: 5000, img: "/img/pruebaimg.jpg", categoria: "Cuadros", detalle: "Cuadro imitación Dalí realizado en Canvas de pared de 60 cm x 80 cm. de 'Sueño causado por el vuelo de una abeja alrededor de una granada un segundo antes del despertar'"},
     {id: 2, stock: 4, nombre: "Anotador s/e", precio: 500, img: "/img/anotadores.jpg", categoria: "Papelería", detalle: "Anotadores sin elección de motivo, diseño zen, de 10 cm x 15 cm x 80 hojas lisas anillado superior"},
@@ -34,7 +36,7 @@ let productos= [
     {id: 25, stock: 7, nombre: "Cuadro Calado en 3", precio: 12000, img: "/img/caladoentres.jpg", categoria: "Cuadros", detalle:"Cuadro de 200 cm x 40 cm ideal para la parte superior de una cama o sillón; transmite calma y armonía por su color blanco de pureza combina con cualquier decoración."},
     {id: 26, stock: 10, nombre: "Velas de Soja Aromatizantes en f/vidrio x 2", precio: 1200, img: "/img/velassojaaroma.jpg", categoria: "Velas y Aromatizantes", detalle: "Velas aromáticas x 2 de aroma a elección, ideal para aromatizar tu espacio zen; en frasco vidrio tamaño grande."}
 ]
-
+*/
 const ItemDetailContainer = () => {
     const [added, setAdded] = useState(false);
     const { id } = useParams()
@@ -43,27 +45,24 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
 
-     if(id){
-        const general = productos.find(e => e.id === parseInt(id))
-        const promesa = new Promise((res, rej) => {
-            setTimeout(() => {
-                res(general)
-            }, 1000)
-        })
-        promesa
-            .then((producto) => {
-                setProducto(producto)
-            })
-    }
-    
+        const coleccionProductos = collection(db,"productos")
+        const docRef = doc(coleccionProductos,id)
+        const pedido = getDoc(docRef)
 
-}, [id])
+        pedido
+        .then((resultado)=>{
+            const producto = resultado.data()
+            setProducto(producto)
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+    },[id])
 
 const onAdd = (count) => {
     addtoCart(producto, count);
     setAdded(true); 
-  }
-
+}
 
     return (
         <div className="divCentrado">

@@ -3,7 +3,7 @@ import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import {CartContext} from "./CartContext"
 
-const CartItem = ({ producto, borrarItem, contadorProductos, precioTotal }) => {
+const CartItem = ({ producto, borrarItem }) => {
   return (
     <Card>
       <Container>

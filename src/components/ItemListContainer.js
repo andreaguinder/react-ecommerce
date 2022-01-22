@@ -1,10 +1,11 @@
+import React from "react";
 import ItemList from "./ItemList"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import {db} from "./firebase"
 import { collection, getDocs, getDoc } from "firebase/firestore"
 
-
+/*
 const productos = [
     {id: 1, nombre: "Sueño causado por el vuelo...", precio: 5000, img: "/img/pruebaimg.jpg", categoria: "Cuadros"},
     {id: 2, nombre: "Anotador S/E", precio: 500, img: "/img/anotadores.jpg", categoria: "Papelería"},
@@ -33,8 +34,39 @@ const productos = [
     {id: 25, nombre: "Cuadro Calado en 3", precio: 12000, img: "/img/caladoentres.jpg", categoria: "Cuadros"},
     {id: 26, stock: 10, nombre: "Velas Aromat. en f/vidrio", precio: 1200, img: "/img/velassojaaroma.jpg", categoria: "Velas y Aromatizantes"}
 ]
+*/
+
+/*
+const ItemListContainer = ({ titulo }) => {
 
 
+    let [lista, setLista] = useState([])
+    const { id } = useParams ()
+
+    useEffect(() => {
+        if(id){
+            let categoria = productos.filter(function(producto) {return producto["categoria"] === id})
+            setLista(categoria)
+        }else{
+            setLista(productos)
+        }   
+    }, [id])
+
+    return (
+        <div>
+            <h2>{titulo}</h2>
+            <ItemList lista={lista}/>
+        </div>
+    )
+}
+
+export default ItemListContainer;
+
+*/
+
+/*
+
+///////////////////////////
 
 const ItemListContainer = ({ titulo }) => {
 
@@ -63,7 +95,10 @@ export default ItemListContainer;
 
 
 
-/*
+
+
+
+
 const ItemListContainer = ({ titulo }) => {
 
 
@@ -98,3 +133,45 @@ const pedido = getDocs(coleccionProductos)
 
 export default ItemListContainer;
 */
+
+const ItemListContainer = ({titulo}) => {
+
+    const [productos, setProductos] = useState([])
+    const {id} = useParams()
+
+    
+    useEffect(() => {
+        if(id){
+            const coleccionProductos = collection(db,"productos")
+            const consulta = (coleccionProductos)
+            const pedido = getDocs(consulta)
+            pedido
+                .then((resultado)=>{
+                    setProductos(resultado.docs.map(doc=>({id : doc.id,...doc.data()})))
+                })
+                .catch((error)=>{
+                    console.log(error)
+                })
+        }else {
+            const coleccionProductos = collection(db,"productos")
+            const pedido = getDocs(coleccionProductos)
+            pedido
+                .then((resultado)=>{
+                    setProductos(resultado.docs.map(doc=>({id : doc.id,...doc.data()})))
+                })
+                .catch((error)=>{
+                    console.log(error)
+                })
+        }
+    },[id])
+
+    return (
+        <div>
+            <h2>{titulo}</h2>
+            <ItemList productos={productos}/>
+        </div>
+    )
+
+}
+
+export default ItemListContainer;
