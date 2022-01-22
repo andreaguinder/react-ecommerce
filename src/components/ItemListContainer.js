@@ -3,7 +3,7 @@ import ItemList from "./ItemList"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import {db} from "./firebase"
-import { collection, getDocs } from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 
 /*
 const productos = [
@@ -143,7 +143,8 @@ const ItemListContainer = ({titulo}) => {
     useEffect(() => {
         if(id){
             const coleccionProductos = collection(db,"productos")
-            const consulta = (coleccionProductos)
+            const filtro = where("title","==",id)
+            const consulta = query(coleccionProductos,filtro)
             const pedido = getDocs(consulta)
             pedido
                 .then((resultado)=>{
@@ -152,6 +153,7 @@ const ItemListContainer = ({titulo}) => {
                 .catch((error)=>{
                     console.log(error)
                 })
+        
         }else {
             const coleccionProductos = collection(db,"productos")
             const pedido = getDocs(coleccionProductos)

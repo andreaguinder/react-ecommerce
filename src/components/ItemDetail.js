@@ -10,9 +10,9 @@ const ItemDetail  = ({producto, onAdd, added}) => {
 
     return (
     <>
-        <Container>
+        <Container   className="divCentrado">
             <Row>
-                <Col><h3>{producto.nombre}</h3>
+                <Col  style={{display: 'flex', flexFlow: 'column', alignItems: 'center', justifyContent: 'space-evenly'}}><h3>{producto.nombre}</h3>
                     <img src={producto.img} alt={producto.nombre} width="50%"/>
                 </Col>
                 <Col style={{display: 'flex', flexFlow: 'column', alignItems: 'center', justifyContent: 'space-evenly'}}>
