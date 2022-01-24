@@ -11,7 +11,6 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import Footer from "./components/Footer";
 import Carrito from "./components/Carrito";
 import CartProvider from './components/CartContext';
-import Usuario from './components/Usuario';
 
 
 function App ({greeting}) {
@@ -36,7 +35,6 @@ function App ({greeting}) {
                 <Route path="/" element={<Main/>} />
                 <Route path='/categoria/:id' element={<ItemListContainer />} />
                 <Route path='/item/:id' element={<ItemDetailContainer />} />
-                <Route path='/Usuario' element={<Usuario/>} />
                 <Route path='/Carrito' element={<Carrito/>} />
                 
                 </Routes>

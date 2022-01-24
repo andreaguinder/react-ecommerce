@@ -19,8 +19,8 @@ const Item = ({ product }) => {
         }}
       >
 
-        <Card.Text>
-          <div className="text-center">Precio ${product.precio}</div>
+        <Card.Text className="text-center">
+          Precio ${product.precio}
         </Card.Text>
         <Link className="btn btn-secondary" to={`/item/${product.id}`}>
           Ver más

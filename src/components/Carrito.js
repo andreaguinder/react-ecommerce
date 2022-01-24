@@ -10,9 +10,8 @@ import Swal from 'sweetalert2';
 
 const CarritoContainer = () => {
 
-    const { cartArray, borrarItem, borrarTodo, cantidadTotal} = useContext(CartContext)
+    const {cartArray, borrarItem, borrarTodo, precioTotal} = useContext(CartContext)
     const [orden, setOrden] = useState(false)
-
     ////// preparando firebase II
     const crearOrden = () => {
 
@@ -26,7 +25,7 @@ const CarritoContainer = () => {
         const orden = {
             usuario,
             cartArray,
-            cantidadTotal,
+            total: precioTotal(),
             fechaPedido: serverTimestamp()
         }
 
@@ -37,7 +36,10 @@ const CarritoContainer = () => {
             setOrden(resultado.id)
             return Swal.fire (
                 'N° de Orden ' + (resultado.id),
-                '¡Gracias por tu compra, volvé pronto!',
+                `
+                El total de tu compra es $${orden.total}.
+                ¡Gracias por tu compra ${orden.usuario.nombre}, volvé pronto!
+                `,
                 'success',
                 borrarTodo()
             )
