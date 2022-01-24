@@ -2,7 +2,6 @@ import React, { createContext, useState, useEffect } from 'react';
 
 export const CartContext = createContext();
 
-
 const CartProvider = ({ children }) => {
 
     const [cartArray, setCartArray] = useState([])
@@ -48,7 +47,6 @@ const CartProvider = ({ children }) => {
         }else{
             setCantidadTotal(0)
         }
-
 
     },[cartArray])
 
