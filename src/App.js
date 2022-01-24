@@ -2,19 +2,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import background from "./fondo-back.jpg";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import React from "react";
-
 import "./components/estilos/estilos.css"
-
-// import './App.scss';
-import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 import Main from "./components/Main";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Footer from "./components/Footer";
 import Carrito from "./components/Carrito";
 import CartProvider from './components/CartContext';
+
 
 function App ({greeting}) {
 
@@ -31,7 +28,7 @@ function App ({greeting}) {
         <CartProvider>
             <BrowserRouter>
                 <div style={myStyle}>
-                <Header/>
+                <NavBar/>
                     <h2 className='text-center mt-5'>{greeting="Todo para tu espacio Zen"}</h2>
                 
                 <Routes>

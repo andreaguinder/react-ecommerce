@@ -36,7 +36,6 @@ const CarritoContainer = () => {
         .then((resultado)=>{
             setOrden(resultado.id)
             return Swal.fire (
-
                 'N° de Orden ' + (resultado.id),
                 '¡Gracias por tu compra, volvé pronto!',
                 'success'
@@ -66,8 +65,6 @@ const CarritoContainer = () => {
                     <div className='divCentrado'>
                     <Button className='btn btn-secondary buttonVerMas m-1' onClick={borrarTodo}>Vaciar Carrito</Button>
                     <Button className='btn btn-secondary buttonVerMas m-1' aria-label="Show SweetAlert2 success message" onClick={crearOrden}>Terminar compra</Button>
-
-                    {/*{orden && <p>Orden de compra: {orden}</p>}*/}
                     </div>
                     </>
                 )

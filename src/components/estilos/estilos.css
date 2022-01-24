@@ -16,7 +16,7 @@ body {
   height: auto;
 }
 
-header {
+.navBar {
   display: inline-flex;
   justify-content: space-around;
   align-content: center;
@@ -26,7 +26,7 @@ header {
   box-shadow: 0px 5px 7px 0px rgba(59, 59, 59, 0.75);
   align-items: center;
 }
-header icon {
+.navBar icon {
   margin-top: 1rem;
   width: 1rem;
 }
