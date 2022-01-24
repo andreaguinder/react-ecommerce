@@ -85,14 +85,9 @@ header icon {
   text-decoration: none;
   font-size: 1rem;
   color: #683a94;
-  background-color: white;
 }
 .linksEstilo .linkCate, #navbarDropdown .linkCate {
   font-size: 0.75rem;
-}
-.linksEstilo .linkCate::after, #navbarDropdown .linkCate::after {
-  background-color: white;
-  text-decoration: none;
 }
 
 .linksEstilo:hover {
