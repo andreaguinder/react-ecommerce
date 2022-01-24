@@ -10,4 +10,4 @@ const ItemList = ({lista}) => {
     )
 }
 
-export default ItemList
+export default ItemList;
