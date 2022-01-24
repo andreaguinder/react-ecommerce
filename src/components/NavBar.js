@@ -9,7 +9,7 @@ const NavBar = () => {
         <>
     <Navbar>
       <Container fluid>
-
+      <Navbar.Brand as='span'><Link to='/public/logo-alyssa.png'></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar" />
         <Navbar.Collapse id="navbar">
           <Nav className="me-auto">

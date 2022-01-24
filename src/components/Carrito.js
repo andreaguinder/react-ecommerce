@@ -1,16 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { CartContext } from './CartContext'
 import { Link } from "react-router-dom"
 import CartItem from "./CartItem"
 import { Button } from "react-bootstrap";
 import TotalTodo from "./TotalTodo";
 import {db} from "./firebase";
-import {collection, addDoc} from "firebase/firestore";
-
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import Swal from 'sweetalert2';
 
 const CarritoContainer = () => {
 
-    const { cartArray, borrarItem, borrarTodo, precioTotal} = useContext(CartContext)
+    const { cartArray, borrarItem, borrarTodo, cantidadTotal} = useContext(CartContext)
+    const [orden, setOrden] = useState(false)
 
     ////// preparando firebase II
     const crearOrden = () => {
@@ -25,14 +26,21 @@ const CarritoContainer = () => {
         const orden = {
             usuario,
             cartArray,
-            precioTotal
+            cantidadTotal,
+            fechaPedido: serverTimestamp()
         }
 
         const pedido = addDoc(coleccionProductos,orden)
 
         pedido
         .then((resultado)=>{
-            console.log(resultado.id)
+            setOrden(resultado.id)
+            return Swal.fire (
+
+                'N° de Orden ' + (resultado.id),
+                '¡Gracias por tu compra, volvé pronto!',
+                'success'
+            )
         })
         .catch((error)=>{
             console.log(error)
@@ -57,7 +65,9 @@ const CarritoContainer = () => {
                     <TotalTodo />
                     <div className='divCentrado'>
                     <Button className='btn btn-secondary buttonVerMas m-1' onClick={borrarTodo}>Vaciar Carrito</Button>
-                    <Button className='btn btn-secondary buttonVerMas m-1' onClick={crearOrden}>Terminar compra</Button>
+                    <Button className='btn btn-secondary buttonVerMas m-1' aria-label="Show SweetAlert2 success message" onClick={crearOrden}>Terminar compra</Button>
+
+                    {/*{orden && <p>Orden de compra: {orden}</p>}*/}
                     </div>
                     </>
                 )
