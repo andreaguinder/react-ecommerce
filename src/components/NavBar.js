@@ -1,14 +1,47 @@
 import React from "react"
 import CartWidget from "./CartWidget";
-import UsuarioLogo from "./UsuarioLogo";
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faBehance } from '@fortawesome/free-brands-svg-icons'
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
+
+
+
+
 
 const NavBar = () => {
+
+  const crearUsuario = () => {
+    Swal
+    .fire({
+        title: "Ingresa tu nombre nombre y apellido",
+        input: "text",
+        text1: "Ingresa tu mail",
+        input2: "text",
+        showCancelButton: true,
+        confirmButtonText: "Guardar",
+        cancelButtonText: "Cancelar",
+        inputValidator: nombre => {
+            // Si el valor es válido, debes regresar undefined. Si no, una cadena
+            if (!nombre) {
+                return "Por favor escribe tu nombre";
+            } else {
+                return undefined;
+            }
+        }
+    })
+    .then(resultado => {
+        if (resultado.value) {
+            let nombre = resultado.value;
+            console.log("Hola, " + nombre);
+        }
+    });
+  }
+
 
     return (
         <>
@@ -29,7 +62,7 @@ const NavBar = () => {
           <Navbar.Brand as='span'><Link to='/'><img src="/marca-alyssa-web.svg" alt="Logo Alyssa" style={{width: "40%", marginTop: "0"}}></img></Link></Navbar.Brand>
 
             <Nav.Link><Link to='/' className="linksEstilo">Inicio</Link></Nav.Link>
-            <Nav.Link><Link to='/src/components/Usuario.js' className="linksEstilo"><UsuarioLogo/></Link></Nav.Link>
+            <Nav.Link><Link aria-label="Show SweetAlert2 success message" onClick={crearUsuario} className="linksEstilo"><FontAwesomeIcon icon={faUser}/></Link></Nav.Link>
             <Nav.Link><Link to='/src/components/Carrito.js' className="linksEstilo"><CartWidget/></Link></Nav.Link>
             <NavDropdown title="Categorías" id="navbarDropdown" className="linksEstilo">
             <Link to='/categoria/Cuadros' className="linksEstilo linkCate"><NavDropdown.Item as='span'>Cuadros</NavDropdown.Item></Link>
@@ -46,4 +79,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
+export default NavBar;

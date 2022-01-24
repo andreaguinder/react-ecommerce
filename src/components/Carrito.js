@@ -38,7 +38,8 @@ const CarritoContainer = () => {
             return Swal.fire (
                 'N° de Orden ' + (resultado.id),
                 '¡Gracias por tu compra, volvé pronto!',
-                'success'
+                'success',
+                borrarTodo()
             )
         })
         .catch((error)=>{
