@@ -10,7 +10,7 @@ const CartWidget = () => {
     const {contadorProductos} = useContext(CartContext)
     return (
         <div>
-        <Link to='/carrito' className="linksEstilo cartWidget">
+        <Link to='/carrito' id="cartEst">
             <FontAwesomeIcon icon={faShoppingCart}/>
         </Link>
         {contadorProductos()> 0 && <p>{contadorProductos()}</p>}

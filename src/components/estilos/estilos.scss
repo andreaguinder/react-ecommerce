@@ -77,7 +77,7 @@ body {
     box-shadow: 5px 0px 7px 0px rgba(145, 145, 145, 0.75);
 }
 
-#buttonVerMas {
+.buttonVerMas {
     background-color: rgb(8, 206, 255);
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -187,16 +187,62 @@ body {
 
 @media only screen and (min-width: 360px) and (max-width: 600px){
     .linkRed{
-        visibility: hidden;
+        display: inline-flex;
     }
 
-
+    .linkRed, .linksEstilo, .nav-item{
+        display: inline-flex;
+        flex-wrap: nowrap;
+    }
 
     .navBar{
         justify-content: space-around;
+        align-content: center;
+        align-items: center;
     }
 
-    .logoAlychico{
-        visibility: hidden;
+    #footer{
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media only screen and (min-width: 600px){
+
+    .linkPrincipal, .linkRed{
+        font-size: 1.5rem;
+        margin-top: 0.25rem;
+        text-decoration: none;
+    }
+
+    .cartEstilo{
+        margin-top: 0.25rem;
+        font-size: 1.5rem;
+        color: rgb(104, 58, 148);
+        text-decoration: none;
+
+        .cartEstilo:hover{
+            color: gray;
+        }
+    }
+
+    #cartEst{
+        text-decoration: none;
+        color: rgb(104, 58, 148);
+    }        
+
+    .cartEst:hover{
+        color: gray;
+    }
+
+    #cateBoton{
+        text-decoration: none;
+        background-color: rgb(104, 58, 148);
+        color: white;
+
+        #cateBoton:hover{
+            background-color: gray;
+        }
     }
 }

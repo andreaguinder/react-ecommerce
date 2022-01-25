@@ -49,98 +49,90 @@ const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav mx-5">
-              <li className="nav-item">
+            <div className="navbar-nav mx-5">
+
                 <Link
                   to="https://www.facebook.com/profile.php?id=100010447723135"
-                  className="linksEstilo linkRed"
+                  className="linksEstilo linkRed nav-item"
                 >
                   <FontAwesomeIcon icon={faFacebook} />
                 </Link>
-              </li>
-              <li className="nav-item">
+
                 <Link
                   to="https://www.instagram.com/andreaguinder/"
-                  className="linksEstilo mx-4 linkRed"
+                  className="linksEstilo mx-4 linkRed nav-item"
                 >
                   <FontAwesomeIcon icon={faInstagram} />
                 </Link>
-              </li>
-              <li className="nav-item">
+
                 <Link
                   to="https://www.behance.net/andreaguinder"
-                  className="linksEstilo linkRed"
+                  className="linksEstilo linkRed nav-item"
                 >
                   <FontAwesomeIcon icon={faBehance} />
                 </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/">
+
+                <Link className="nav-item" to="/">
                   <img
                     src="/marca-alyssa-web.svg"
                     alt="Logo Alyssa"
                     className="logoAlychico mx-5"
-                    style={{ width: "40%", marginTop: "0" }}
+                    style={{ width: "30%", marginTop: "0" }}
                   ></img>
                 </Link>
-              </li>
-              <li>
+
                 <Link to="/" className="linksEstilo mx-4 linkPrincipal">
                   Inicio
                 </Link>
-              </li>
-              <li>
+
                 <Link to="" aria-label="Show SweetAlert2 success message" onClick={crearUsuario} className="linksEstilo linkPrincipal mx-5">
                   <FontAwesomeIcon icon={faUser} />
                 </Link>
-              </li>
-              <li>
-                <Link to="/src/components/Carrito.js" className="linksEstilo linkPrincipal mx-4 my-0">
-                  <CartWidget className="cartWidget"/>
+
+                <Link to="/src/components/Carrito.js" className="linksEstilo cartEstilo mx-5">
+                  <CartWidget/>
                 </Link>
-              </li>
+
+              </div>
               <div class="dropdown">
                 <button
                   title="Categorías"
-                  class="btn btn-secondary dropdown-toggle ml-2"
+                  class="btn dropdown-toggle ml-2"
                   type="button"
-                  id="dropdownMenuButton2"
+                  id="cateBoton"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Categorías
                 </button>
-                <ul
-                  class="dropdown-menu dropdown-menu-dark"
+                <div
+                  class="dropdown-menu dropdown-menu-light"
                   aria-labelledby="dropdownMenuButton2"
                 >
-                  <li>
+
                     <Link
                       to="/categoria/Cuadros"
                       className="linksEstilo dropdown-item linkCate"
                     >
                       Cuadros
                     </Link>
-                  </li>
-                  <li>
+
                     <Link
                       to="/categoria/Velas y Aromatizantes"
                       className="linksEstilo dropdown-item linkCate"
                     >
                       Velas y Aromatizantes
                     </Link>
-                  </li>
-                  <li>
+
                     <Link
                       to="/categoria/Papelería"
                       className="linksEstilo dropdown-item linkCate"
                     >
                       Papelería
                     </Link>
-                  </li>
-                </ul>
+
+</div>
               </div>
-            </ul>
           </div>
         </div>
       </nav>
