@@ -26,7 +26,7 @@ const NavBar = () => {
     }).then((resultado) => {
       if (resultado.value) {
         let nombre = resultado.value;
-        console.log("Hola, " + nombre);
+        Swal.fire("Hola, " + nombre);
       }
     });
   };
@@ -48,35 +48,28 @@ const NavBar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <div className="navbar-nav">
-                <Link
-                  to="https://www.facebook.com/profile.php?id=100010447723135"
+              <div id="redesSociales">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100010447723135"
                   className="linksEstilo linkRed nav-item"
                 >
                   <FontAwesomeIcon icon={faFacebook} />
-                </Link>
+                </a>
 
-                <Link
-                  to="https://www.instagram.com/andreaguinder/"
+                <a
+                  href="https://www.instagram.com/andreaguinder/"
                   className="linksEstilo mx-4 linkRed nav-item"
                 >
                   <FontAwesomeIcon icon={faInstagram} />
-                </Link>
+                </a>
 
-                <Link
-                  to="https://www.behance.net/andreaguinder"
+                <a
+                  href="https://www.behance.net/andreaguinder"
                   className="linksEstilo linkRed nav-item"
                 >
                   <FontAwesomeIcon icon={faBehance} />
-                </Link>
-
-                <Link className="nav-item" to="/">
-                  <img
-                    src="/marca-alyssa-web.svg"
-                    alt="Logo Alyssa"
-                    className="logoAlychico mx-5"
-                    style={{ width: "30%", marginTop: "0" }}
-                  ></img>
-                </Link>
+                </a>
+                </div>
                 <Link to="/" className="linksEstilo mx-4 linkPrincipal">
                   Inicio
                 </Link>
@@ -85,15 +78,15 @@ const NavBar = () => {
                   <FontAwesomeIcon icon={faUser} />
                 </Link>
 
-                <Link to="/src/components/Carrito.js" className="linksEstilo cartEstilo mx-5">
+                <div to="/src/components/Carrito.js" className="linksEstilo cartEstilo mx-5">
                   <CartWidget/>
-                </Link>
+                </div>
 
               </div>
               <div className="dropdown">
                 <button
                   title="Categorías"
-                  className="btn dropdown-toggle ml-2"
+                  className="btn dropdown-toggle ml-5"
                   type="button"
                   id="cateBoton"
                   data-bs-toggle="dropdown"

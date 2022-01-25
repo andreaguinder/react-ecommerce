@@ -17,6 +17,10 @@ body {
     height: auto;
 }
 
+#redesSociales{
+    margin-right: 8rem;
+}
+
 .navBar {
     display: inline-flex;
     justify-content: space-around;
@@ -78,7 +82,7 @@ body {
 }
 
 .buttonVerMas {
-    background-color: rgb(8, 206, 255);
+    background-color: rgb(0, 79, 143);
     text-decoration: none;
     color: rgb(255, 255, 255);
     border-radius: 0.25rem;
@@ -120,7 +124,7 @@ body {
     text-indent: -9999em;
     animation: mulShdSpin 1.3s infinite linear;
     transform: translateZ(0);
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 @keyframes mulShdSpin {
@@ -186,29 +190,50 @@ body {
 
 
 @media only screen and (min-width: 360px) and (max-width: 600px){
-/*    .linkRed{
-        display: inline-flex;
-    }
-
-    .linkRed, .linksEstilo, .nav-item{
-        display: inline-flex;
-        flex-wrap: nowrap;
-    }
-
-    .navBar{
-        justify-content: space-around;
-        align-content: center;
-        align-items: center;
-    }
-*/
 
     #navOrden{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
         align-items: center;
-        align-content: center;  
+    }
+
+    .linkPrincipal, .linkRed{
+        font-size: 1.5rem;
+        margin-top: 0.25rem;
+        text-decoration: none;
+        justify-content: space-around;
+
+    }
+
+    .cartEstilo{
+        margin-top: 0.25rem;
+        font-size: 1.5rem;
+        color: rgb(104, 58, 148);
+        text-decoration: none;
+        justify-content: space-around;
+
+        .cartEstilo:hover{
+            color: gray;
+        }
+    }
+
+    #cartEst{
+        text-decoration: none;
+        color: rgb(104, 58, 148);
+        justify-content: space-around;
+    }        
+
+    .cartEst:hover{
+        color: gray;
+    }
+
+    #cateBoton{
+        text-decoration: none;
+        background-color: rgb(104, 58, 148);
+        color: white;
+        justify-content: space-around;
+
+        #cateBoton:hover{
+            background-color: gray;
+        }
     }
 
     #footer{

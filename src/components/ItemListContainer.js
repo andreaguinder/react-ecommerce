@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom"
 import {db} from "./firebase"
 import { collection, getDocs, query, where } from "firebase/firestore"
 import  Loader from "./Loader";
+import Swal from "sweetalert2";
 
 const ItemListContainer = ({titulo}) => {
 
@@ -25,7 +26,7 @@ const ItemListContainer = ({titulo}) => {
                     setLoading(false)
                 })
                 .catch((error)=>{
-                    console.log(error)
+                    Swal.fire(error)
                 })
         
         }else {
@@ -37,16 +38,21 @@ const ItemListContainer = ({titulo}) => {
                     setLoading(false)
                 })
                 .catch((error)=>{
-                    console.log(error)
+                    Swal.fire(error)
                 })
         }
     },[id])
 
         return (
+        <>
         <div className="divCentrado">
             <h2>{titulo}</h2>
+            <img src="/marca-alyssa-web.svg" alt="Logo Alyssa" style={{ width: "40%", marginTop: "0", justifyContent: "space-around"}}></img>
+        </div>
+        <div className="divCentrado">
             {loading ? <Loader /> : <ItemList lista={lista}/>}
         </div>
+        </>
         )
 }
 
