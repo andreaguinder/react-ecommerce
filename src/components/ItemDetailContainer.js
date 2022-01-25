@@ -4,8 +4,10 @@ import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
-import { db } from "./firebase"
-import { collection, getDoc , doc } from "firebase/firestore"
+import { db } from "./firebase";
+import { collection, getDoc , doc } from "firebase/firestore";
+import  Loader from "./Loader";
+import Swal from "sweetalert2";
 
 const ItemDetailContainer = () => {
     const [added, setAdded] = useState(false);
@@ -27,7 +29,7 @@ const ItemDetailContainer = () => {
             setLoading(false)
         })
         .catch((error)=>{
-            console.log(error)
+            Swal.fire(error)
         })
     },[id])
 
@@ -36,21 +38,12 @@ const onAdd = (count) => {
     setAdded(true); 
 }
 
-
-
-    if (loading) {
-    return (
-        <span className="loader"></span>
-    )
-    } else {
     return (
         <div className="divCentrado">
-            <ItemDetail onAdd={onAdd} producto={producto} added={added}/>
+            {loading ? <Loader /> : <ItemDetail onAdd={onAdd} producto={producto} added={added}/>}
         </div>
     )
     }
-
-}
 
 export default ItemDetailContainer;
 

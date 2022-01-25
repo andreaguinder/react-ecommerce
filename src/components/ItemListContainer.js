@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import {db} from "./firebase"
 import { collection, getDocs, query, where } from "firebase/firestore"
+import  Loader from "./Loader";
 
 const ItemListContainer = ({titulo}) => {
 
@@ -41,17 +42,12 @@ const ItemListContainer = ({titulo}) => {
         }
     },[id])
 
-    if (loading) {
         return (
-            <span className="loader"></span>
-        )
-    }else {
-        return (
-        <div>
+        <div className="divCentrado">
             <h2>{titulo}</h2>
-            <ItemList lista={lista}/>
+            {loading ? <Loader /> : <ItemList lista={lista}/>}
         </div>
         )
-    }
 }
+
 export default ItemListContainer;

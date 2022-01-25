@@ -85,6 +85,12 @@ body {
     border-color: none;
 }
 
+.linkPrincipal, .linkRed{
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+}
+
+
 .linksEstilo,
 #navbarDropdown {
     text-decoration: none;
@@ -105,15 +111,16 @@ body {
 }
 
 .loader {
-    color: #fff;
-    font-size: 10px;
+    color: rgb(80, 0, 100);
+    font-size: 2rem;
     width: 1em;
     height: 1em;
-    border-radius: 50%;
+    border-radius: 100%;
     position: relative;
     text-indent: -9999em;
     animation: mulShdSpin 1.3s infinite linear;
     transform: translateZ(0);
+    justify-content: space-evenly;
 }
 
 @keyframes mulShdSpin {
@@ -172,6 +179,11 @@ body {
             -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
     }
 }
+
+.cartWidget{
+    margin-top: -1rem;
+}
+
 
 @media only screen and (min-width: 360px) and (max-width: 600px){
     .linkRed{
