@@ -6,8 +6,6 @@ import ItemCount from "./ItemCount";
 
 const ItemDetail  = ({producto, onAdd, added}) => {
 
-    
-
     return (
     <>
         <Container   className="divCentrado">

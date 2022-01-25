@@ -12,7 +12,6 @@ const CarritoContainer = () => {
 
     const {cartArray, borrarItem, borrarTodo, precioTotal} = useContext(CartContext)
     const [orden, setOrden] = useState(false)
-    ////// preparando firebase II
     const crearOrden = () => {
 
         const coleccionProductos = collection(db,"ordenes")
@@ -38,18 +37,16 @@ const CarritoContainer = () => {
                 'N° de Orden ' + (resultado.id),
                 `
                 El total de tu compra es $${orden.total}.
-                ¡Gracias por tu compra ${orden.usuario.nombre}, volvé pronto!
+                ¡Gracias por tu compra, volvé pronto!
                 `,
                 'success',
                 borrarTodo()
             )
         })
         .catch((error)=>{
-            console.log(error)
+            return Swal.fire(error)
         })
     }
-    ///// firebase II
-
 
             if (cartArray.length === 0){
                 return(

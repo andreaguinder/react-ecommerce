@@ -40,7 +40,7 @@ const onAdd = (count) => {
 
     if (loading) {
     return (
-        <div className='loader'></div>
+        <span className="loader"></span>
     )
     } else {
     return (

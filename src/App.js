@@ -12,7 +12,6 @@ import Footer from "./components/Footer";
 import Carrito from "./components/Carrito";
 import CartProvider from './components/CartContext';
 
-
 function App ({greeting}) {
 
     const myStyle={ 
@@ -24,7 +23,6 @@ function App ({greeting}) {
     };
 
     return (
-        <>  
         <CartProvider>
             <BrowserRouter>
                 <div style={myStyle}>
@@ -40,11 +38,8 @@ function App ({greeting}) {
                 </Routes>
                 <Footer/>
                 </div>
-
             </BrowserRouter>
         </CartProvider>
-        </>
-
     );
 
 }

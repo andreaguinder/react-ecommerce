@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
-
+import Swal from 'sweetalert2';
 export const CartContext = createContext();
-
 const CartProvider = ({ children }) => {
 
     const [cartArray, setCartArray] = useState([])
@@ -11,11 +10,10 @@ const CartProvider = ({ children }) => {
         if (isInCart(product.id)) {
             const indexActualizar = cartArray.findIndex(el => el.item.id === product.id)
             cartArray[indexActualizar].count = cartArray[indexActualizar].count + count
-            console.log('El producto ya se encuentra en el carrito.');
-
+            return Swal.fire('El producto ya se encuentra en el carrito.');
 
         } else {
-            console.log(`Agregaste ${product.nombre}, cantidad: ${count}.`);
+            Swal.fire (`Agregaste ${product.nombre}, cantidad: ${count}.`);
             const newObj = {
                 item: product,
                 count
@@ -24,7 +22,6 @@ const CartProvider = ({ children }) => {
         }
     }
     
-
     const borrarItem = (id) => {
         const actualizarCart = cartArray.filter(el => el.item.id !== id)
         setCartArray(actualizarCart);
@@ -37,7 +34,6 @@ const CartProvider = ({ children }) => {
     const isInCart = (id) => {
         return cartArray.some(el => el.item.id === id)
     }
-
 
     useEffect(() => {
         if(cartArray.length > 0){
@@ -68,7 +64,6 @@ const CartProvider = ({ children }) => {
         contadorProductos,
         precioTotal
     }
-
 
     return (
         <CartContext.Provider value={value}>

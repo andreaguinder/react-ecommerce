@@ -17,7 +17,6 @@ const CartItem = ({ producto, borrarItem }) => {
         </Row>
       </Container>
     </Card>
-
   );
 };
 
