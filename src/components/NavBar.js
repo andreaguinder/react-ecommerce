@@ -13,8 +13,6 @@ const NavBar = () => {
     Swal.fire({
       title: "Ingresa tu nombre nombre y apellido",
       input: "text",
-      text1: "Ingresa tu mail",
-      input2: "text",
       showCancelButton: true,
       confirmButtonText: "Guardar",
       cancelButtonText: "Cancelar",
@@ -35,7 +33,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="navbar navBar navbar-expand-lg navbar-light">
+      <nav className="navbar navBar navbar-expand-lg navbar-light" id="navOrden">
         <div className="container">
           <button
             className="navbar-toggler"
@@ -49,8 +47,8 @@ const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <div className="navbar-nav mx-5">
-
+            <div className="navbar-nav">
+              <div>
                 <Link
                   to="https://www.facebook.com/profile.php?id=100010447723135"
                   className="linksEstilo linkRed nav-item"
@@ -71,7 +69,8 @@ const NavBar = () => {
                 >
                   <FontAwesomeIcon icon={faBehance} />
                 </Link>
-
+                </div>
+                <div>
                 <Link className="nav-item" to="/">
                   <img
                     src="/marca-alyssa-web.svg"
@@ -80,7 +79,8 @@ const NavBar = () => {
                     style={{ width: "30%", marginTop: "0" }}
                   ></img>
                 </Link>
-
+                </div>
+                <div>
                 <Link to="/" className="linksEstilo mx-4 linkPrincipal">
                   Inicio
                 </Link>
@@ -88,16 +88,16 @@ const NavBar = () => {
                 <Link to="" aria-label="Show SweetAlert2 success message" onClick={crearUsuario} className="linksEstilo linkPrincipal mx-5">
                   <FontAwesomeIcon icon={faUser} />
                 </Link>
-
+                </div>
                 <Link to="/src/components/Carrito.js" className="linksEstilo cartEstilo mx-5">
                   <CartWidget/>
                 </Link>
 
               </div>
-              <div class="dropdown">
+              <div className="dropdown">
                 <button
                   title="Categorías"
-                  class="btn dropdown-toggle ml-2"
+                  className="btn dropdown-toggle ml-2"
                   type="button"
                   id="cateBoton"
                   data-bs-toggle="dropdown"
@@ -106,7 +106,7 @@ const NavBar = () => {
                   Categorías
                 </button>
                 <div
-                  class="dropdown-menu dropdown-menu-light"
+                  className="dropdown-menu dropdown-menu-light"
                   aria-labelledby="dropdownMenuButton2"
                 >
 

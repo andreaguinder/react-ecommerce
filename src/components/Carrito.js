@@ -11,7 +11,6 @@ import Swal from 'sweetalert2';
 const CarritoContainer = () => {
 
     const {cartArray, borrarItem, borrarTodo, precioTotal} = useContext(CartContext)
-    const [orden, setOrden] = useState(false)
     const crearOrden = () => {
 
         const coleccionProductos = collection(db,"ordenes")
@@ -32,7 +31,6 @@ const CarritoContainer = () => {
 
         pedido
         .then((resultado)=>{
-            setOrden(resultado.id)
             return Swal.fire (
                 'N° de Orden ' + (resultado.id),
                 `

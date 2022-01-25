@@ -186,7 +186,7 @@ body {
 
 
 @media only screen and (min-width: 360px) and (max-width: 600px){
-    .linkRed{
+/*    .linkRed{
         display: inline-flex;
     }
 
@@ -200,11 +200,28 @@ body {
         align-content: center;
         align-items: center;
     }
+*/
+
+    #navOrden{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;  
+    }
 
     #footer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
         align-content: center;
+    }
+
+    .miNombre{
+        margin-top: -1rem;
     }
 }
 
@@ -244,5 +261,14 @@ body {
         #cateBoton:hover{
             background-color: gray;
         }
+    }
+}
+
+
+    @media only screen and (min-width: 900px) and (max-width: 1400px){
+
+    #navOrden{
+        display: inline-block;
+        flex-shrink: unset;
     }
 }

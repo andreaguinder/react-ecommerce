@@ -177,25 +177,41 @@ body {
 }
 
 @media only screen and (min-width: 360px) and (max-width: 600px) {
-  .linkRed {
-    display: inline-flex;
-  }
+  /*    .linkRed{
+          display: inline-flex;
+      }
 
-  .linkRed, .linksEstilo, .nav-item {
-    display: inline-flex;
+      .linkRed, .linksEstilo, .nav-item{
+          display: inline-flex;
+          flex-wrap: nowrap;
+      }
+
+      .navBar{
+          justify-content: space-around;
+          align-content: center;
+          align-items: center;
+      }
+  */
+  #navOrden {
+    display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
-  }
-
-  .navBar {
-    justify-content: space-around;
-    align-content: center;
+    justify-content: space-between;
     align-items: center;
+    align-content: center;
   }
 
   #footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     align-content: center;
+  }
+
+  .miNombre {
+    margin-top: -1rem;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -231,5 +247,11 @@ body {
   }
   #cateBoton #cateBoton:hover {
     background-color: gray;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1400px) {
+  #navOrden {
+    display: inline-block;
+    flex-shrink: unset;
   }
 }/*# sourceMappingURL=estilos.css.map */
