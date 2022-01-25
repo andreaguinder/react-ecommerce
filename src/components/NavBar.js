@@ -101,21 +101,21 @@ const NavBar = () => {
 
                     <Link
                       to="/categoria/Cuadros"
-                      className="linksEstilo dropdown-item linkCate"
+                      className="linksEstilo dropdown-item bg-light linkCate"
                     >
                       Cuadros
                     </Link>
 
                     <Link
                       to="/categoria/Velas y Aromatizantes"
-                      className="linksEstilo dropdown-item linkCate"
+                      className="linksEstilo dropdown-item bg-light linkCate"
                     >
                       Velas y Aromatizantes
                     </Link>
 
                     <Link
                       to="/categoria/Papelería"
-                      className="linksEstilo dropdown-item linkCate"
+                      className="linksEstilo dropdown-item bg-light linkCate"
                     >
                       Papelería
                     </Link>

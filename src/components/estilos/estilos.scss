@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Pushster&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-family: 'Pushster', cursive;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
 }
 
@@ -35,6 +35,10 @@ body {
         margin-top: 1rem;
         width: 1rem;
     }
+}
+
+.nombreCard{
+    font-size: 1rem;
 }
 
 #footer {
@@ -92,8 +96,8 @@ body {
 .linkPrincipal, .linkRed{
     font-size: 1.5rem;
     margin-top: 0.25rem;
+    font-weight: bold;
 }
-
 
 .linksEstilo,
 #navbarDropdown {
@@ -200,6 +204,7 @@ body {
         margin-top: 0.25rem;
         text-decoration: none;
         justify-content: space-around;
+        font-weight: bold;
 
     }
 
@@ -256,6 +261,7 @@ body {
         font-size: 1.5rem;
         margin-top: 0.25rem;
         text-decoration: none;
+        font-weight: bold;
     }
 
     .cartEstilo{
@@ -284,16 +290,43 @@ body {
         color: white;
 
         #cateBoton:hover{
-            background-color: gray;
+            color: rgb(104, 58, 148);
+            background-color: white;
+        }
+
+    }
+
+    .dropdown-item{
+        color: rgb(104, 58, 148);
+        background-color: white;
+    
+        .dropdown-item:active{
+            color: rgb(104, 58, 148);
+            background-color: white;
+            font-weight: bold;
         }
     }
-}
+
+    }
 
 
-    @media only screen and (min-width: 900px) and (max-width: 1400px){
+
+    @media only screen and (min-width: 900px) and (max-width: 1920px){
 
     #navOrden{
         display: inline-block;
         flex-shrink: unset;
     }
+
+    .dropdown-item{
+        color: rgb(104, 58, 148);
+        background-color: white;
+    
+        .dropdown-item:active{
+            color: rgb(104, 58, 148);
+            background-color: white;
+            font-weight: bold;
+        }
+    }
+
 }
