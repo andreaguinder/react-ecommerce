@@ -8,6 +8,7 @@ import { collection, getDocs, query, where } from "firebase/firestore"
 const ItemListContainer = ({titulo}) => {
 
     const [lista, setLista] = useState([])
+    const [loading, setLoading] = useState(true)
     const {id} = useParams()
 
     
@@ -20,6 +21,7 @@ const ItemListContainer = ({titulo}) => {
             pedido
                 .then((resultado)=>{
                     setLista(resultado.docs.map(doc=>({id : doc.id,...doc.data()})))
+                    setLoading(false)
                 })
                 .catch((error)=>{
                     console.log(error)
@@ -31,6 +33,7 @@ const ItemListContainer = ({titulo}) => {
             pedido
                 .then((resultado)=>{
                     setLista(resultado.docs.map(doc=>({id : doc.id,...doc.data()})))
+                    setLoading(false)
                 })
                 .catch((error)=>{
                     console.log(error)
@@ -38,13 +41,17 @@ const ItemListContainer = ({titulo}) => {
         }
     },[id])
 
-    return (
+    if (loading) {
+        return (
+            <div className='loader'></div>
+        )
+    }else {
+        return (
         <div>
             <h2>{titulo}</h2>
             <ItemList lista={lista}/>
         </div>
-    )
-
+        )
+    }
 }
-
 export default ItemListContainer;

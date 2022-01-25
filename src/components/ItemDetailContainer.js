@@ -10,6 +10,7 @@ import { collection, getDoc , doc } from "firebase/firestore"
 const ItemDetailContainer = () => {
     const [added, setAdded] = useState(false);
     const { id } = useParams()
+    const [loading, setLoading] = useState(true)
     const [producto, setProducto] = useState({})
     const { addtoCart } = useContext(CartContext);
 
@@ -23,6 +24,7 @@ const ItemDetailContainer = () => {
         .then((resultado)=>{
             const producto = resultado.data()
             setProducto({...producto, id})
+            setLoading(false)
         })
         .catch((error)=>{
             console.log(error)
@@ -34,11 +36,20 @@ const onAdd = (count) => {
     setAdded(true); 
 }
 
+
+
+    if (loading) {
+    return (
+        <div className='loader'></div>
+    )
+    } else {
     return (
         <div className="divCentrado">
             <ItemDetail onAdd={onAdd} producto={producto} added={added}/>
         </div>
     )
+    }
+
 }
 
 export default ItemDetailContainer;
