@@ -1,6 +1,6 @@
 # E-Commerce Alyssa
 
-Proyecto de React JS. para CoderHouse.
+Proyecto de React JS. para CoderHouse. Primer E-commerce realizada y acercamiento a React Js.
 
 ## ¿Qué es Alyssa?
 
@@ -8,7 +8,9 @@ Alyssa es un emprendimiento ficticio que vende cuadros, velas, papelería, entre
 
 ## Tecnologías utilizadas:
 
-Este sitio fue creado con Create React App. Se debe correr con "npm start" desde consola para poder visualizarse. De base se utilizó: HTML5, CSS3, SASS y JavaScript.
+Este sitio fue creado con Create React App. Se debe correr con "npm start" desde consola para poder visualizarse o hacer click
+### [ACÁ](https://ecommerce-react-alyssa-andreaguinder.netlify.app/)
+Que llevará a su despliegue en Netlify. De base se utilizó: HTML5, CSS3, SASS y JavaScript.
 
 ## Información sobre el proyecto:
 
@@ -18,6 +20,13 @@ Este sitio fue creado con Create React App. Se debe correr con "npm start" desde
 * Maquetación mediante Flexbox.
 * Animaciones mediante JavaScript a través de componentes React.
 * Diseños y estilo propio.
+* Se utilizó Sweet Alert 2
+* Se utilizó GIT y NPM
+* Se utilizó Firebase para creación e integración de Base de Datos.
+
+## Sobre el proyecto:
+* Profesor: Horacio Gutierrez
+* Tutor: Nicolás Krein Werle
 
 ## Contactame:
 
