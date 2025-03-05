@@ -22,7 +22,7 @@ Que llevará a su despliegue en Netlify. De base se utilizó: HTML5, CSS3, SASS 
 * Diseños y estilo propio.
 * Se utilizó Sweet Alert 2
 * Se utilizó GIT y NPM
-* Se utilizó Firebase para creación e integración de Base de Datos.
+* Se utilizó Firebase para creación e integración de Base de Datos. Actualización 05/03/25: Debido a que expiró la licencia de Firebase, se creó un json para traer la Base de Datos del proyecto mismo.
 
 ## Sobre el proyecto:
 * Profesor: Horacio Gutierrez
