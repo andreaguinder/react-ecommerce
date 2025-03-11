@@ -9,8 +9,8 @@ Alyssa es un emprendimiento ficticio que vende cuadros, velas, papelería, entre
 ## Tecnologías utilizadas:
 
 Este sitio fue creado con Create React App. Se debe correr con "npm start" desde consola para poder visualizarse o hacer click
-### [ACÁ](https://ecommerce-react-alyssa-andreaguinder.netlify.app/)
-Que llevará a su despliegue en Netlify. De base se utilizó: HTML5, CSS3, SASS y JavaScript.
+### [ACÁ](https://react-ecommerce-ten-livid.vercel.app/)
+Que llevará a su despliegue en Vercel. De base se utilizó: HTML5, CSS3, SASS y JavaScript.
 
 ## Información sobre el proyecto:
 
