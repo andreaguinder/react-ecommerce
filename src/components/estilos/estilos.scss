@@ -12,6 +12,14 @@ body {
     background-color: rgb(255, 248, 239);
 }
 
+h3.titulo{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
 #logoNavBar {
     width: 20%;
     height: auto;
@@ -120,9 +128,9 @@ body {
 
 .loader {
     color: rgb(80, 0, 100);
-    font-size: 2rem;
-    width: 1em;
-    height: 1em;
+    font-size: 1rem;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 100%;
     position: relative;
     text-indent: -9999em;
@@ -214,10 +222,36 @@ body {
         color: rgb(104, 58, 148);
         text-decoration: none;
         justify-content: space-around;
+        gap: 20px;
+        padding-top: 1rem;
 
         .cartEstilo:hover{
             color: gray;
         }
+    }
+
+    h3.titulo{
+        font-size: 1.1rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .logo-alyssa {
+        width: 40% !important;
+        margin-top: -1rem !important;
+        margin-bottom: -1rem !important;
+    }
+
+    .divCentrado {
+        margin: 0rem 1rem !important;
+    }
+
+    .divCentrado .card{
+        width: 17rem !important;
+        margin: 0.5rem !important;
+    }
+    .divCard{
+        margin: 0rem 1rem !important;
     }
 
     #cartEst{
@@ -251,7 +285,9 @@ body {
     }
 
     .miNombre{
-        margin-top: -1rem;
+        margin-top: 0rem;
+        font-size: 1.25rem;
+    
     }
 }
 
@@ -273,6 +309,15 @@ body {
         .cartEstilo:hover{
             color: gray;
         }
+    }
+
+    .navbar-nav{
+        display: flex;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
     }
 
     #cartEst{

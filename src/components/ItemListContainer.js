@@ -1,59 +1,53 @@
-import React from "react";
-import ItemList from "./ItemList"
-import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
-import {db} from "./firebase"
-import { collection, getDocs, query, where } from "firebase/firestore"
-import  Loader from "./Loader";
+import React, { useState, useEffect } from "react";
+import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
+import Loader from "./Loader";
 import Swal from "sweetalert2";
 
-const ItemListContainer = ({titulo}) => {
+const ItemListContainer = ({ titulo }) => {
+  const [lista, setLista] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { id } = useParams();
 
-    const [lista, setLista] = useState([])
-    const [loading, setLoading] = useState(true)
-    const {id} = useParams()
-
-    
-    useEffect(() => {
-        if(id){
-            const coleccionProductos = collection(db,"productos")
-            const filtro = where("categoria","==",id)
-            const consulta = query(coleccionProductos,filtro)
-            const pedido = getDocs(consulta)
-            pedido
-                .then((resultado)=>{
-                    setLista(resultado.docs.map(doc=>({id : doc.id,...doc.data()})))
-                    setLoading(false)
-                })
-                .catch((error)=>{
-                    Swal.fire(error)
-                })
-        
-        }else {
-            const coleccionProductos = collection(db,"productos")
-            const pedido = getDocs(coleccionProductos)
-            pedido
-                .then((resultado)=>{
-                    setLista(resultado.docs.map(doc=>({id : doc.id,...doc.data()})))
-                    setLoading(false)
-                })
-                .catch((error)=>{
-                    Swal.fire(error)
-                })
+  useEffect(() => {
+    const fetchProductos = async () => {
+      try {
+        const response = await fetch("/base.json");  
+        const productos = await response.json();
+  
+        let filteredProductos = productos;
+  
+        if (id) {
+          filteredProductos = productos.filter((prod) => prod.categoria === id);
         }
-    },[id])
+  
+        setLista(filteredProductos);
+      } catch (error) {
+        Swal.fire("Error al cargar los productos: " + error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+  
+    fetchProductos();
+  }, [id]);
 
-        return (
-        <>
-        <div className="divCentrado">
-            <h2>{titulo}</h2>
-            <img src="/marca-alyssa-web.svg" alt="Logo Alyssa" style={{ width: "40%", marginTop: "0", justifyContent: "space-around"}}></img>
-        </div>
-        <div className="divCentrado">
-            {loading ? <Loader /> : <ItemList lista={lista}/>}
-        </div>
-        </>
-        )
-}
+  return (
+    <>
+      <div className="divCentrado">
+        <h2>{titulo}</h2>
+        <img
+          src="/marca-alyssa-web.svg"
+          alt="Logo Alyssa"
+          style={{ width: "20%", marginTop: "-3rem", marginBottom: "-3rem", justifyContent: "space-around" }}
+          class= "logo-alyssa"
+        />
+      </div>
+      <div className="divCentrado">
+        {loading ? <Loader /> : <ItemList lista={lista} />}
+      </div>
+    </>
+  );
+};
 
 export default ItemListContainer;

@@ -19,10 +19,12 @@ Que llevará a su despliegue en Netlify. De base se utilizó: HTML5, CSS3, SASS 
 * Se utiliza SASS como compilador de CSS.
 * Maquetación mediante Flexbox.
 * Animaciones mediante JavaScript a través de componentes React.
-* Diseños y estilo propio.
+* Diseños de marca, generales y estilo propio.
 * Se utilizó Sweet Alert 2
 * Se utilizó GIT y NPM
-* Se utilizó Firebase para creación e integración de Base de Datos. Actualización 05/03/25: Debido a que expiró la licencia de Firebase, se creó un json para traer la Base de Datos del proyecto mismo.
+* Se utilizó Firebase para creación e integración de Base de Datos. Actualización 05/03/25: Debido a que expiró la licencia de Firebase, se creó un json para traer la Base de Datos del proyecto mismo y ahora obtiene los datos de ahí.
+* Las páginas: Legales, Nosotros y ¿Cómo comprar?, del Footer, no existen, redirigen al principio de la App, se debe tocar Inicio.
+* Toda informacón es ficticia y se ha creado para al proyecto. De querer contactarme, las redes sociales están arriba con links reales.
 
 ## Sobre el proyecto:
 * Profesor: Horacio Gutierrez

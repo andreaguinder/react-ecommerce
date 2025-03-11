@@ -8,7 +8,7 @@ const TotalTodo = () => {
     const {contadorProductos, precioTotal} = useContext(CartContext)
     return (
 
-        <div className="divCentrado">
+        <div className="divCentrado divCard">
         <Container fluid style={{background: "white",}}>
             <Row>
             <Col className="divCentrado">Cantidad de productos{contadorProductos()> 0 && <p className="m-3">{contadorProductos()}</p>}</Col>

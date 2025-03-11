@@ -57,7 +57,7 @@ const NavBar = () => {
                 </a>
 
                 <a
-                  href="https://www.instagram.com/andreaguinder/"
+                  href="https://www.instagram.com/andyguinder/"
                   className="linksEstilo mx-4 linkRed nav-item"
                 >
                   <FontAwesomeIcon icon={faInstagram} />

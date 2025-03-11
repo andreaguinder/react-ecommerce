@@ -27,7 +27,7 @@ function App ({greeting}) {
             <BrowserRouter>
                 <div style={myStyle}>
                 <NavBar/>
-                    <h2 className='text-center mt-5'>{greeting="Todo para tu espacio Zen"}</h2>
+                    <h3 className='text-center mt-5' class="titulo">{greeting="Todo para tu espacio Zen"}</h3>
                 
                 <Routes>
                 <Route path="/" element={<Main/>} />

@@ -1,5 +1,6 @@
 [
-    {
+  {
+    "id": 1,
     "categoria": "Cuadros",
     "detalle": "2 Cuadros de 60 cm. x 50 cm. que se cuelgan por separado y se perciben como un todo. Sus tonalidades beige los hacen aptos para cualquier espacio. Transmiten calma.",
     "img": "/img/mandalaendos.jpg",
@@ -7,8 +8,8 @@
     "precio": 10000,
     "stock": 5
   },
-
   {
+    "id": 2,
     "categoria": "Cuadros",
     "detalle": "3 cuadros creados con un patrón de Mandala; de efecto misterioso, armonizarán cualquier ambiente y lo cargarán de energía positiva; ideal repartir turmalinas negras en el espacio para que absorban y se lleven la energía negativa del lugar y las personas.",
     "img": "/img/29554.jpg",
@@ -16,17 +17,17 @@
     "precio": 20000,
     "stock": 10
   },
-
   {
+    "id": 3,
     "categoria": "Cuadros",
-    "detalle": "Este cuadro, llamado Mandala estilo rústico se asemeja a los papiros egipcios, por sus colores vivos, las tintas utilizadas; vibra una energía muy alta en el cuarto en el que se cuelgue.",    
+    "detalle": "Este cuadro, llamado Mandala estilo rústico se asemeja a los papiros egipcios, por sus colores vivos, las tintas utilizadas; vibra una energía muy alta en el cuarto en el que se cuelgue.",
     "img": "/img/mandalaegipcio.png",
     "nombre": "Mandala estilo Rústico",
     "precio": 3000,
     "stock": 6
   },
-
   {
+    "id": 4,
     "categoria": "Velas y Aromatizantes",
     "detalle": "3 Esencias para Hornito/Hornillo a elección.",
     "img": "/img/IMG_GR_productos1576609973.jpg",
@@ -34,8 +35,8 @@
     "precio": 1500,
     "stock": 20
   },
-
   {
+    "id": 5,
     "categoria": "Velas y Aromatizantes",
     "detalle": "Hornito/Hornillo Rosa con dos velas de soja común y una esencia a elección.",
     "img": "/img/aromatiz-convela.jpg",
@@ -43,8 +44,8 @@
     "precio": 2000,
     "stock": 2
   },
-
   {
+    "id": 6,
     "categoria": "Cuadros",
     "detalle": "2 cuadros de 70 cm x 60 cm. inspirados en el patrón Mandala y en el sol, iluminarán cualquier ambiente y atraerán energía positiva, ideal juntarlos con piedras de la luna repartidas en el espacio.",
     "img": "/img/61p9aQVM4lL._AC_SX466_.jpg",
@@ -52,8 +53,8 @@
     "precio": 12000,
     "stock": 3
   },
-
   {
+    "id": 7,
     "categoria": "Papelería",
     "detalle": "Anotadores sin elección de motivo, diseño zen, de 10 cm x 15 cm x 80 hojas lisas anillado superior.",
     "img": "/img/anotadores.jpg",
@@ -61,8 +62,8 @@
     "precio": 500,
     "stock": 4
   },
-
   {
+    "id": 8,
     "categoria": "Velas y Aromatizantes",
     "detalle": "Hornito/Hornillo Rosa con 10 velas de soja común y esencia a elección.",
     "img": "/img/hornito-diezvelas-unaesencia.jpeg",
@@ -70,8 +71,8 @@
     "precio": 6000,
     "stock": 3
   },
-
   {
+    "id": 9,
     "categoria": "Velas y Aromatizantes",
     "detalle": "Difusores con palitos de bamboo, aroma Vainilla, Strawberry y Naranja de 50ml cada uno.",
     "img": "/img/difusoresportres.jpg",
@@ -79,8 +80,8 @@
     "precio": 1500,
     "stock": 3
   },
-
   {
+    "id": 10,
     "categoria": "Velas y Aromatizantes",
     "detalle": "Velas aromáticas de soja x 2 de aroma a elección en frascos de vidrio, tamaño grande, ideal para aromatizar tu espacio zen.",
     "img": "/img/velassojaaroma.jpg",
@@ -88,8 +89,8 @@
     "precio": 1200,
     "stock": 10
   },
-
   {
+    "id": 11,
     "categoria": "Cuadros",
     "detalle": "Cuadro de 50 cm. x 65 cm; ideal para darle un toque natural pero romántico a cualquier ambiente.",
     "img": "/img/81dfcfde8e103227c8e4cee88f9ffadc.jpg",
@@ -97,8 +98,8 @@
     "precio": 900,
     "stock": 3
   },
-
   {
+    "id": 12,
     "categoria": "Cuadros",
     "detalle": "Cuadro imitación Dalí realizado en Canvas de pared de 70 cm x 50 cm.",
     "img": "/img/tmp1091343711360516099.jpg",
@@ -106,10 +107,8 @@
     "precio": 5000,
     "stock": 8
   },
-
-
-
   {
+    "id": 13,
     "categoria": "Cuadros",
     "detalle": "Cuadros inspirados en la naturaleza de 50cm x 65cm que se colocan indivodualmente pero se perciben como un todo.",
     "img": "/img/365ab63e9f8810bb416eb0b95e63bc85.jpg",
@@ -117,8 +116,8 @@
     "precio": 12000,
     "stock": 3
   },
-
   {
+    "id": 14,
     "categoria": "Velas y Aromatizantes",
     "detalle": "Hornito Rústico con 2 velas y 3 esencias. Hornito/Hornillo rústico con una vela de soja roja y otra verde con esencias a elección.",
     "img": "/img/hornitorustico-diezvelas.jpg",
@@ -126,8 +125,8 @@
     "precio": 4000,
     "stock": 2
   },
-
   {
+    "id": 15,
     "categoria": "Papelería",
     "detalle": "Agenda Zen con día por hoja, Sábados y Domingos juntos, con una hoja con frase motivadora histórica al inicio de cada mes; hojas de Contactos al principio, hojas de Notas al final y 1 plancha de stickers de regalo.",
     "img": "/img/agendas 3.jpg",
@@ -135,8 +134,8 @@
     "precio": 2000,
     "stock": 5
   },
-
   {
+    "id": 16,
     "categoria": "Papelería",
     "detalle": "Agendas Zen con 3 días en cada hoja + Sábados y Domingos Juntos, hojas de Contactos al principio, hojas de Notas al final y 2 planchas de stickers de regalo.",
     "img": "/img/agendas 2.jpg",
@@ -144,8 +143,8 @@
     "precio": 1000,
     "stock": 5
   },
-
   {
+    "id": 17,
     "categoria": "Cuadros",
     "detalle": "El cuadro se titula: Sueño causado por el vuelo de una abeja alrededor de una granada un segundo antes del despertar. Es una imitación del Dalí realizado en Canvas de pared de 60 cm x 80 cm.",
     "img": "/img/pruebaimg.jpg",
@@ -153,8 +152,8 @@
     "precio": 5000,
     "stock": 5
   },
-
   {
+    "id": 18,
     "categoria": "Cuadros",
     "detalle": "Cuadro de 200 cm x 40 cm ideal para la parte superior de una cama o sillón; transmite calma y armonía por su color blanco de pureza combina con cualquier decoración.",
     "img": "/img/caladoentres.jpg",
@@ -162,8 +161,8 @@
     "precio": 12000,
     "stock": 7
   },
-
   {
+    "id": 19,
     "categoria": "Papelería",
     "detalle": "Anotadores ecológicos 100% hechos de materiales reciclados de 15 cm. x 10 cm x 80 hojas + lapicera de regalo.",
     "img": "/img/anotadores eco.webp",
@@ -171,8 +170,8 @@
     "precio": 1000,
     "stock": 6
   },
-
   {
+    "id": 20,
     "categoria": "Cuadros",
     "detalle": "Cuadro inspirado en la Naturaleza pero con una simbología de ambigüedad en sus colores siendo magenta y cyan, de 50 cm x 65 cm.",
     "img": "/img/fondo 2.jpg",
@@ -180,8 +179,8 @@
     "precio": 800,
     "stock": 2
   },
-
   {
+    "id": 21,
     "categoria": "Velas y Aromatizantes",
     "detalle": "Hornitos/Hornillos blancos distintos con velas de soja comunes y 3 esencias a elección.",
     "img": "/img/hornitosportres-velas.jpg",
@@ -189,10 +188,8 @@
     "precio": 10000,
     "stock": 5
   },
-
-
-
   {
+    "id": 22,
     "categoria": "Velas y Aromatizantes",
     "detalle": "Velas aromáticas x 2 de aroma Strawberry, ideal para aromatizar tu espacio zen; en frasco plástico tamaño chico.",
     "img": "/img/Velas mockup con trama.png",
@@ -200,8 +197,8 @@
     "precio": 400,
     "stock": 10
   },
-
   {
+    "id": 23,
     "categoria": "Velas y Aromatizantes",
     "detalle": "Difusores con palitos de bamboo, aroma Vainilla, Strawberry, Naranja, Chocolate y Melón de 50ml cada uno.",
     "img": "/img/difusores.jpg",
@@ -209,8 +206,8 @@
     "precio": 2000,
     "stock": 2
   },
-
   {
+    "id": 24,
     "categoria": "Velas y Aromatizantes",
     "detalle": "Esencias para Hornillos/Hornitos: Aromas: Almendra, Almizcle, Ambar, Azahar, Benjui, Canela, Citronella, Coco, Durazno, Eucalipto, Fresia, Frutilla, Incienso, Jazmin, Lavanda, Lila, Limon, Maderas, Magnolia, Mango, Manzana, Maracuya, Melón, Menta, Miel, Mirra, Musk, Naranja, Nardo, Opium, P. Floral, P. Frutal, Palo Santo, Patchouly, Pino, Reina, Romero, Rosa, Ruda, Sand. Hindu, Sandalo, Vainilla, Violeta y Esotéricos: 7 Poderes, Atrae Dinero, Corta Envidia, Destrabe, Lava Casa, Unión De Pareja, Vence Todo.",
     "img": "/img/aromatizantes-hornitos.jpg",
@@ -218,8 +215,8 @@
     "precio": 4500,
     "stock": 5
   },
-
   {
+    "id": 25,
     "categoria": "Papelería",
     "detalle": "Anotadores ecológicos 100% hechos de materiales reciclados de 12 cm. x 8 cm x 80 hojas.",
     "img": "/img/anotadores eco de cocina.jpg",
@@ -227,8 +224,8 @@
     "precio": 800,
     "stock": 6
   },
-
   {
+    "id": 26,
     "categoria": "Papelería",
     "detalle": "Agendas Zen con día por hoja inclusive Sábados y Domingos, para que puedas llevar una mejor organización de tus tiempos; hojas de Contactos al principio, hojas de Notas al final y 3 planchas de stickers de regalo.",
     "img": "/img/agendas.jpg",
@@ -236,5 +233,4 @@
     "precio": 2500,
     "stock": 12
   }
-
 ]
