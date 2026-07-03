@@ -9,7 +9,7 @@ const FooterConst = () => {
                     <Link to='/index.html' className="linksEstilo">¿Cómo comprar?</Link>
                 </Col>
                 <Col style={{display: "flex", flexFlow: "column", flexWrap: "wrap", justifyContent: "space-evenly",}}>
-                    <p style={{margin: "1rem",}}>Diseño y Desarrollo por </p><a href='https://andreaguinder.github.io/portfolio-guinderandrea/' className="linksEstilo linkRed miNombre">Andrea Guinder</a>
+                    <p style={{margin: "1rem",}}>Diseño y Desarrollo por </p><a href='https://guinderstudio.com/' className="linksEstilo linkRed miNombre">Guinder Studio</a>
                 </Col>
                 <Col style={{display: "flex", flexFlow: "column", flexWrap: "wrap", justifyContent: "space-evenly",}}>
                     <p style={{paddingTop:"1rem",}}>Tel: (+54) 11 6867 5242</p>
