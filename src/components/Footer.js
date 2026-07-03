@@ -8,7 +8,7 @@ const FooterConst = () => {
                     <Link to='/index.html' className="linksEstilo">Nosotros</Link>
                     <Link to='/index.html' className="linksEstilo">¿Cómo comprar?</Link>
                 </Col>
-                <Col style={{display: "flex", flexFlow: "column", flexWrap: "wrap", justifyContent: "space-evenly",}}>
+                <Col style={{display: "flex", flexFlow: "column", flexWrap: "wrap", justifyContent: "space-evenly" ,}}>
                     <p style={{margin: "1rem",}}>Diseño y Desarrollo por </p><a href='https://guinderstudio.com/' className="linksEstilo linkRed miNombre">Guinder Studio</a>
                 </Col>
                 <Col style={{display: "flex", flexFlow: "column", flexWrap: "wrap", justifyContent: "space-evenly",}}>
