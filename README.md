@@ -30,7 +30,11 @@ Que llevará a su despliegue en Vercel. De base se utilizó: HTML5, CSS3, SASS y
 * Profesor: Horacio Gutierrez
 * Tutor: Nicolás Krein Werle
 
-## Contactame:
+## ¿Te gustaría colaborar o tenés un desafío laboral?
 
-Por información, colaboración o servicios no dudes en contactarme a través de mis redes o mi
-### [Portfolio](https://andreaguinder.github.io/portfolio-guinderandrea/)
+¡Me encantaría conectar con vos! Estoy abierta a nuevas oportunidades, proyectos desafiantes o simplemente charlar sobre tecnología.
+
+* **Email:** [andreabelen.guinder@gmail.com](mailto:andreabelen.guinder@gmail.com)
+* **LinkedIn:** [https://www.linkedin.com/in/andrea-guinder/](https://www.linkedin.com/in/andrea-guinder/)
+* **Portfolio:** [https://andreaguinder.com/](https://andreaguinder.com/)
+
